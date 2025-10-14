@@ -1,4 +1,3 @@
-// FIX: Import newly created EruptionData and EventData types.
 import type { PersonalInfo, WorkExperienceData, ProjectData, ConnectInfo, EruptionData, EventData } from './types';
 
 export const personalInfo: PersonalInfo = {
@@ -33,16 +32,16 @@ export const projects: ProjectData[] = [
   { id: '08', title: "AI Age Verification", description: "A secure, privacy-first system for frictionless AI-based age verification.", url: "https://ai-age-verification.vercel.app/" }
 ];
 
-// FIX: Add eruptions constant to be used in EruptionsSection component.
+// FIX: Add eruptions data to resolve import error in EruptionsSection.
 export const eruptions: EruptionData[] = [
   { id: '01', name: "Mount Vesuvius", location: "Italy", date: "AD 79", level: "VEI 5" },
   { id: '02', name: "Krakatoa", location: "Indonesia", date: "1883", level: "VEI 6" },
   { id: '03', name: "Mount St. Helens", location: "USA", date: "1980", level: "VEI 5" },
 ];
 
-// FIX: Add events constant to be used in EventsSection component.
+// FIX: Add events data to resolve import error in EventsSection.
 export const events: EventData[] = [
-    { id: '01', date1: "2024-01-01", date2: "2024-01-02", code: "ALPHA-001", date3: "2024-01-03" },
-    { id: '02', date1: "2024-02-10", date2: "2024-02-11", code: "BETA-002", date3: "2024-02-12" },
-    { id: '03', date1: "2024-03-20", date2: "2024-03-21", code: "GAMMA-003", date3: "2024-03-22" },
+  { id: 'E1', date1: "2024-01-01", date2: "2024-01-02", code: "ALPHA", date3: "2024-01-03" },
+  { id: 'E2', date1: "2024-02-10", date2: "2024-02-11", code: "BETA", date3: "2024-02-12" },
+  { id: 'E3', date1: "2024-03-20", date2: "2024-03-21", code: "GAMMA", date3: "2024-03-22" },
 ];
