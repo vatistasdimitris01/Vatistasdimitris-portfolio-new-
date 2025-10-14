@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Dimitris Vatistas - Web Developer & Designer Portfolio</title>
+    
+    <meta name="description" content="Explore the portfolio of Dimitris Vatistas, a passionate web developer and designer specializing in crafting digital products that balance aesthetics with functionality. Discover projects built with React, Next.js, and a keen eye for design." />
+    <meta name="keywords" content="Dimitris Vatistas, portfolio, web developer, web designer, React, Next.js, Figma, Framer, frontend developer, QRoyal, AI projects" />
+    <meta name="author" content="Dimitris Vatistas" />
+
+    <link rel="icon" href="https://i.postimg.cc/XJLxYvYW/ezgif-2ca2b0855c645a.png" type="image/png" />
+    <link rel="apple-touch-icon" href="https://i.postimg.cc/XJLxYvYW/ezgif-2ca2b0855c645a.png" />
+
+    <meta property="og:title" content="Dimitris Vatistas - Web Developer & Designer Portfolio" />
+    <meta property="og:description" content="Explore the portfolio of Dimitris Vatistas, a passionate web developer and designer specializing in crafting digital products that balance aesthetics with functionality." />
+    <meta property="og:image" content="https://i.postimg.cc/13XPKgNb/Untitled.jpg" />
+    <meta property="og:url" content="https://your-live-url.com" /> <!-- TODO: Replace with your deployed URL -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Dimitris Vatistas Portfolio" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://i.postimg.cc/13XPKgNb/Untitled.jpg" />
+    <meta name="twitter:title" content="Dimitris Vatistas - Web Developer & Designer Portfolio" />
+    <meta name="twitter:description" content="Explore the portfolio of Dimitris Vatistas, a passionate web developer and designer specializing in crafting digital products that balance aesthetics with functionality." />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+      *, *::after, *::before { box-sizing: border-box; }
+      :root {
+        font-size: 16px;
+      }
+      body {
+        margin: 0;
+        color: #000;
+        background-color: #fff;
+        font-family: "JetBrains Mono", monospace;
+        font-weight: 300;
+        font-optical-sizing: auto;
+        text-transform: uppercase;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      body::after {
+        content: ''; position: absolute; top: 0; left: 0; height: 100%; width: 100%;
+        background-image: repeating-linear-gradient(transparent, transparent 2px, #0000001a 3px);
+        background-size: auto 100%; pointer-events: none;
+      }
+      a { text-decoration: none; color: black; outline: none; cursor: pointer; }
+      a:hover { color: #000; }
+      a:focus { outline: none; }
+      a:focus-visible { outline: 2px solid red; }
+
+      .w-layout-grid { display: grid; grid-auto-columns: 1fr; }
+      
+      .page-wrapper { width: 100%; overflow: hidden; }
+      .main-wrapper { padding: 2rem; }
+      .section_hero { width: 100%; }
+      .padding-global { padding-right: 2rem; padding-left: 2rem; }
+      .hero_wrapper { display: flex; flex-direction: column; gap: 4rem; }
+      
+      .nav_component {}
+      .nav_list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
+      .nav_item { display: flex; align-items: center; gap: 2rem; }
+      .nav-title { font-size: 1.5rem; line-height: 1.2; }
+      .nav-name { font-weight: 400; }
+      
+      .social-links { display: flex; gap: 1rem; align-items: center; }
+      .social-icon svg {
+        width: 24px;
+        height: 24px;
+        fill: #000;
+        transition: opacity 0.3s ease;
+      }
+      .social-icon:hover svg {
+        opacity: 0.7;
+      }
+
+      .hero-section { display: flex; flex-direction: column; gap: 1rem; }
+      .hero-bio {
+        font-size: 1.125rem;
+        line-height: 1.6;
+        max-width: 65ch;
+        text-transform: none;
+        font-weight: 400;
+      }
+
+      .content_section { display: flex; flex-direction: column; gap: 0.25rem; }
+      .content-title { font-size: 1.5rem; }
+      
+      .grid_list {
+        align-items: start;
+        grid-column-gap: 1rem;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
+      .grid_list.title-grid { border-bottom: none; padding-bottom: 0; }
+      .number-block { font-size: 18px; color: #000; padding: 0.1rem 0; }
+      .text-block { font-size: 18px; display: block; width: 100%; color: #000; padding: 0.1rem 0; }
+      .grid_item { }
+      
+      .work-experience-grid { grid-template-columns: 0.5fr 1fr 1fr 1fr; }
+      .projects-grid { grid-template-columns: 0.5fr 1fr 2fr; }
+      .projects-grid .text-block { text-transform: none; } /* Description is normal case */
+
+      @media screen and (max-width: 991px) {
+        .nav_item { gap: 1.5rem; }
+        .nav-title { font-size: 1.25rem; }
+        .hero-bio { font-size: 1rem; }
+      }
+      @media screen and (max-width: 767px) {
+        .main-wrapper, .padding-global { padding: 1rem; }
+        .nav_list { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+        .nav_item { flex-direction: column; align-items: flex-start; gap: 1rem; width: 100%;}
+
+        .grid_list { 
+          grid-template-columns: 0.5fr 2.5fr; 
+          grid-row-gap: 0.25rem;
+          grid-auto-flow: dense;
+        }
+        .grid_list .grid_item:nth-child(n+2) { grid-column-start: 2; }
+        .content-title { font-size: 1.25rem; }
+        .text-block, .number-block { font-size: 16px; }
+      }
+
+      .hover-effect {
+        font-kerning: none; position: relative; white-space: normal;
+      }
+      .hover-effect .word {
+        white-space: nowrap; display: inline-block; margin-right: 0.5em;
+      }
+      .hover-effect .word:last-child { margin-right: 0; }
+      .hover-effect .char {
+        position: relative; --opa: 0;
+      }
+      .hover-effect.hover-effect--cursor-square .char::after {
+        content: ''; width: 1ch; top: 0; left: 0; position: absolute;
+        opacity: var(--opa); background: currentColor; height: 100%;
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "gsap": "https://aistudiocdn.com/gsap@^3.13.0",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.0.4",
+    "vite": "https://aistudiocdn.com/vite@^7.1.10"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
