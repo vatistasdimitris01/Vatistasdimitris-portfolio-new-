@@ -9,7 +9,7 @@ interface ProjectsSectionProps {
 const ProjectsSection: React.FC<ProjectsSectionProps> = ({ animationsEnabled }) => {
   const { t } = useLanguage();
   return (
-    <div className="content_section">
+    <div id="projects" className="content_section">
       <div className="w-layout-grid grid_list title-grid">
         <div className="content-title">{t.projects.title}</div>
       </div>

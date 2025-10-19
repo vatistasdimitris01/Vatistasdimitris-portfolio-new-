@@ -8,7 +8,7 @@ interface NavProps {
 }
 
 const Nav: React.FC<NavProps> = ({ animationsEnabled, toggleAnimations }) => {
-  const { language, toggleLanguage, t } = useLanguage();
+  const { t, language, toggleLanguage } = useLanguage();
 
   return (
     <div className="nav_component">

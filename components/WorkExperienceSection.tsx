@@ -9,7 +9,7 @@ interface WorkExperienceProps {
 const WorkExperienceSection: React.FC<WorkExperienceProps> = ({ animationsEnabled }) => {
   const { t } = useLanguage();
   return (
-    <div className="content_section">
+    <div id="work-experience" className="content_section">
       <div className="w-layout-grid grid_list title-grid">
         <div className="content-title">{t.workExperience.title}</div>
       </div>
