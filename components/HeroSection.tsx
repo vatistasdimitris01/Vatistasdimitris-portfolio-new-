@@ -1,5 +1,5 @@
 import React from 'react';
-import { personalInfo } from '../constants';
+import { useLanguage } from '../contexts/LanguageContext';
 import HoverText from './HoverText';
 
 interface HeroSectionProps {
@@ -7,11 +7,13 @@ interface HeroSectionProps {
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({ animationsEnabled }) => {
+  const { t } = useLanguage();
+
   return (
     <div id="about" className="hero-section">
-      <HoverText text={personalInfo.title} className="content-title" disabled={!animationsEnabled} />
+      <HoverText text={t.hero.title} className="content-title" disabled={!animationsEnabled} />
       <p className="hero-bio">
-        {personalInfo.bio}
+        {t.hero.bio}
       </p>
     </div>
   );

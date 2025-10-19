@@ -1,5 +1,5 @@
 import React from 'react';
-import { workExperience } from '../constants';
+import { useLanguage } from '../contexts/LanguageContext';
 import HoverText from './HoverText';
 
 interface WorkExperienceProps {
@@ -7,13 +7,14 @@ interface WorkExperienceProps {
 }
 
 const WorkExperienceSection: React.FC<WorkExperienceProps> = ({ animationsEnabled }) => {
+  const { t } = useLanguage();
   return (
     <div className="content_section">
       <div className="w-layout-grid grid_list title-grid">
-        <div className="content-title">WORK EXPERIENCE</div>
+        <div className="content-title">{t.workExperience.title}</div>
       </div>
 
-      {workExperience.map(data => (
+      {t.workExperience.experiences.map(data => (
         <div key={data.id} className="w-layout-grid grid_list work-experience-grid">
           <div className="number-block">{data.id}</div>
           <div className="grid_item">

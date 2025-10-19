@@ -34,22 +34,12 @@
       :root {
         font-size: 16px; /* Base font size */
         
-        /* Light Theme (Default) */
-        --bg-color: #fff;
-        --text-color: #000;
-        --border-color: rgba(0, 0, 0, 0.1);
-        --scanline-color: rgba(0, 0, 0, 0.1);
-        --social-icon-fill: #000;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --bg-color: #080808;
-          --text-color: #e0e0e0;
-          --border-color: rgba(255, 255, 255, 0.1);
-          --scanline-color: rgba(255, 255, 255, 0.05);
-          --social-icon-fill: #e0e0e0;
-        }
+        /* Dark Theme (Default) */
+        --bg-color: #080808;
+        --text-color: #e0e0e0;
+        --border-color: rgba(255, 255, 255, 0.1);
+        --scanline-color: rgba(255, 255, 255, 0.05);
+        --social-icon-fill: #e0e0e0;
       }
 
       body {
@@ -62,7 +52,6 @@
         text-transform: uppercase;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        transition: background-color 0.3s ease, color 0.3s ease;
       }
       body::after {
         content: ''; position: absolute; top: 0; left: 0; height: 100%; width: 100%;

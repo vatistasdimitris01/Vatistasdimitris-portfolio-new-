@@ -1,5 +1,6 @@
 import React from 'react';
 import HoverText from './HoverText';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface NavProps {
   animationsEnabled: boolean;
@@ -7,17 +8,26 @@ interface NavProps {
 }
 
 const Nav: React.FC<NavProps> = ({ animationsEnabled, toggleAnimations }) => {
+  const { language, toggleLanguage, t } = useLanguage();
+
   return (
     <div className="nav_component">
       <div className="nav_list">
-        <HoverText as="a" href="#" text="Dimitris Vatistas" className="nav-title nav-name" disabled={!animationsEnabled} />
+        <HoverText as="a" href="#" text={t.nav.name} className="nav-title nav-name" disabled={!animationsEnabled} />
         <div className="nav_item">
           <HoverText
             as="div"
-            onClick={toggleAnimations}
-            text={`[ ANIMATIONS: ${animationsEnabled ? 'ON' : 'OFF'} ]`}
+            onClick={toggleLanguage}
+            text={`[ ${language === 'en' ? 'EN' : 'GR'} ]`}
             className="animation-toggle"
-            disabled={true} // The toggle itself should not animate
+            disabled={true}
+          />
+          <HoverText
+            as="div"
+            onClick={toggleAnimations}
+            text={animationsEnabled ? t.nav.animationsOn : t.nav.animationsOff}
+            className="animation-toggle"
+            disabled={true}
           />
           <div className="social-links">
             <a href="https://www.instagram.com/vatistasdimitris/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Instagram">
