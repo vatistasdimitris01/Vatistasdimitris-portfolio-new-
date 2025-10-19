@@ -16,7 +16,6 @@ export interface ProjectData {
   title: string;
   description: string;
   url: string;
-  slug: string;
 }
 
 export interface SocialLink {

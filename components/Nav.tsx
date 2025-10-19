@@ -1,12 +1,24 @@
 import React from 'react';
 import HoverText from './HoverText';
 
-const Nav: React.FC = () => {
+interface NavProps {
+  animationsEnabled: boolean;
+  toggleAnimations: () => void;
+}
+
+const Nav: React.FC<NavProps> = ({ animationsEnabled, toggleAnimations }) => {
   return (
     <div className="nav_component">
       <div className="nav_list">
-        <HoverText as="a" href="#" text="Dimitris Vatistas" className="nav-title nav-name" />
+        <HoverText as="a" href="#" text="Dimitris Vatistas" className="nav-title nav-name" disabled={!animationsEnabled} />
         <div className="nav_item">
+          <HoverText
+            as="div"
+            onClick={toggleAnimations}
+            text={`[ ANIMATIONS: ${animationsEnabled ? 'ON' : 'OFF'} ]`}
+            className="animation-toggle"
+            disabled={true} // The toggle itself should not animate
+          />
           <div className="social-links">
             <a href="https://www.instagram.com/vatistasdimitris/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Instagram">
               <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">

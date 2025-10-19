@@ -7,13 +7,14 @@ interface HoverTextProps {
   className?: string;
   href?: string;
   target?: string;
-  // FIX: Add rel prop to support anchor tag attributes and fix type error.
   rel?: string;
+  disabled?: boolean;
+  onClick?: () => void;
 }
 
 const lettersAndSymbols = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '!', '@', '#', '$', '%', '^', '&', '*', '-', '_', '+', '=', ';', ':', '<', '>', ','];
 
-const HoverText: React.FC<HoverTextProps> = ({ text, as: Component = 'div', className, ...props }) => {
+const HoverText: React.FC<HoverTextProps> = ({ text, as: Component = 'div', className, disabled = false, ...props }) => {
   const elementRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -25,6 +26,13 @@ const HoverText: React.FC<HoverTextProps> = ({ text, as: Component = 'div', clas
       const chars = word.split('').map(char => `<span class="char">${char === ' ' ? '&nbsp;' : char}</span>`).join('');
       return `<span class="word">${chars}</span>`;
     }).join('');
+    
+    if (disabled) {
+        element.classList.remove('hover-effect--cursor-square');
+        return;
+    }
+    
+    element.classList.add('hover-effect--cursor-square');
 
     const chars = Array.from(element.querySelectorAll('.char')) as HTMLElement[];
     const originalChars = chars.map(c => c.innerHTML);
@@ -69,20 +77,23 @@ const HoverText: React.FC<HoverTextProps> = ({ text, as: Component = 'div', clas
     
     triggerElement.addEventListener('mouseenter', animate);
 
-    // Animate on load. A small delay can make it feel smoother.
-    const onLoadTimeout = setTimeout(animate, 100);
+    // Only animate on load if not disabled
+    if (!disabled) {
+        const onLoadTimeout = setTimeout(animate, 100);
+        return () => {
+            clearTimeout(onLoadTimeout);
+            triggerElement.removeEventListener('mouseenter', animate);
+            gsap.killTweensOf(chars);
+        };
+    }
 
     return () => {
       triggerElement.removeEventListener('mouseenter', animate);
-      clearTimeout(onLoadTimeout);
-      // Kill any running animations when the component unmounts.
       gsap.killTweensOf(chars);
     };
-  }, [text]);
+  }, [text, disabled]);
 
-  // The component receives the text and doesn't render it directly,
-  // letting the useEffect hook handle the initial innerHTML setup.
-  return <Component ref={elementRef} className={`hover-effect hover-effect--cursor-square ${className || ''}`} {...props} />;
+  return <Component ref={elementRef} className={`hover-effect ${className || ''}`} {...props} />;
 };
 
 export default memo(HoverText);

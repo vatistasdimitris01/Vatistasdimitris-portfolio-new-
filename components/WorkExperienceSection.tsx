@@ -2,7 +2,11 @@ import React from 'react';
 import { workExperience } from '../constants';
 import HoverText from './HoverText';
 
-const WorkExperienceSection: React.FC = () => {
+interface WorkExperienceProps {
+  animationsEnabled: boolean;
+}
+
+const WorkExperienceSection: React.FC<WorkExperienceProps> = ({ animationsEnabled }) => {
   return (
     <div className="content_section">
       <div className="w-layout-grid grid_list title-grid">
@@ -13,13 +17,13 @@ const WorkExperienceSection: React.FC = () => {
         <div key={data.id} className="w-layout-grid grid_list work-experience-grid">
           <div className="number-block">{data.id}</div>
           <div className="grid_item">
-            <HoverText text={data.role} className="text-block" />
+            <HoverText text={data.role} className="text-block" disabled={!animationsEnabled} />
           </div>
           <div className="grid_item">
-            <HoverText text={data.company} className="text-block" />
+            <HoverText text={data.company} className="text-block" disabled={!animationsEnabled} />
           </div>
           <div className="grid_item">
-            <HoverText text={data.period} className="text-block" />
+            <HoverText text={data.period} className="text-block" disabled={!animationsEnabled} />
           </div>
         </div>
       ))}

@@ -2,10 +2,14 @@ import React from 'react';
 import { personalInfo } from '../constants';
 import HoverText from './HoverText';
 
-const HeroSection: React.FC = () => {
+interface HeroSectionProps {
+  animationsEnabled: boolean;
+}
+
+const HeroSection: React.FC<HeroSectionProps> = ({ animationsEnabled }) => {
   return (
     <div id="about" className="hero-section">
-      <HoverText text={personalInfo.title} className="content-title" />
+      <HoverText text={personalInfo.title} className="content-title" disabled={!animationsEnabled} />
       <p className="hero-bio">
         {personalInfo.bio}
       </p>
