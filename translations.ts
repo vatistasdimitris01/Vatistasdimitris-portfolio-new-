@@ -26,15 +26,15 @@ export const translations: { en: Translations; el: Translations } = {
     },
     hero: {
       title: "Web Developer & Web Designer",
-      bio: "I'm Dimitris Vatistas, a developer and designer passionate about crafting digital products that balance aesthetics with functionality. My work spans the full creative and technical process — from wireframing in Figma and prototyping in Framer, to building production-ready applications in React and Next.js."
+      bio: "I'm Dimitris Vatistas, a developer and designer crafting digital products that balance aesthetics with functionality. My work spans the full creative and technical process — from wireframing in Figma and prototyping in Framer, to building production-ready applications in React and Next.js."
     },
     workExperience: {
       title: "WORK EXPERIENCE",
       experiences: [
-        { id: '01', role: "Founder & CEO", company: "QRoyal", period: "2023 - Present" },
-        { id: '02', role: "Developer", company: "AI Beauty", period: "2022 - 2023" },
-        { id: '03', role: "Developer", company: "AI Age Verification", period: "2022" },
-        { id: '04', role: "Student", company: "High School & Further Education", period: "2021 - Present" }
+        { id: '01', role: "Student", company: "High School & Further Education", period: "2021 - Present" },
+        { id: '02', role: "Founder & CEO", company: "QRoyal", period: "2023 - 2025" },
+        { id: '03', role: "Developer", company: "AI Beauty", period: "2022 - 2023" },
+        { id: '04', role: "Developer", company: "AI Age Verification", period: "2022" }
       ]
     },
     projects: {
@@ -60,15 +60,15 @@ export const translations: { en: Translations; el: Translations } = {
     },
     hero: {
       title: "Web Developer & Web Designer",
-      bio: "Είμαι ο Δημήτρης Βατίστας, ένας προγραμματιστής και σχεδιαστής παθιασμένος με τη δημιουργία ψηφιακών προϊόντων που ισορροπούν την αισθητική με τη λειτουργικότητα. Η δουλειά μου καλύπτει ολόκληρη τη δημιουργική και τεχνική διαδικασία — από το wireframing στο Figma και το prototyping στο Framer, μέχρι τη δημιουργία έτοιμων για παραγωγή εφαρμογών σε React και Next.js."
+      bio: "Είμαι ο Δημήτρης Βατίστας, ένας προγραμματιστής και σχεδιαστής που δημιουργεί ψηφιακά προϊόντα που ισορροπούν την αισθητική με τη λειτουργικότητα. Η δουλειά μου καλύπτει ολόκληρη τη δημιουργική και τεχνική διαδικασία — από το wireframing στο Figma και το prototyping στο Framer, μέχρι τη δημιουργία έτοιμων για παραγωγή εφαρμογών σε React και Next.js."
     },
     workExperience: {
       title: "ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΕΜΠΕΙΡΙΑ",
       experiences: [
-        { id: '01', role: "Ιδρυτής & CEO", company: "QRoyal", period: "2023 - Σήμερα" },
-        { id: '02', role: "Προγραμματιστής", company: "AI Beauty", period: "2022 - 2023" },
-        { id: '03', role: "Προγραμματιστής", company: "AI Age Verification", period: "2022" },
-        { id: '04', role: "Μαθητής", company: "Λύκειο & Περαιτέρω Εκπαίδευση", period: "2021 - Σήμερα" }
+        { id: '01', role: "Μαθητής", company: "Λύκειο & Περαιτέρω Εκπαίδευση", period: "2021 - Σήμερα" },
+        { id: '02', role: "Ιδρυτής & CEO", company: "QRoyal", period: "2023 - 2025" },
+        { id: '03', role: "Προγραμματιστής", company: "AI Beauty", period: "2022 - 2023" },
+        { id: '04', role: "Προγραμματιστής", company: "AI Age Verification", period: "2022" }
       ]
     },
     projects: {
