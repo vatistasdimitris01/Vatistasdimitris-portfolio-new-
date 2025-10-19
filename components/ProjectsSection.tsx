@@ -13,10 +13,7 @@ const ProjectsSection: React.FC = () => {
         <div key={data.id} className="w-layout-grid grid_list projects-grid">
           <div className="number-block">{data.id}</div>
           <div className="grid_item">
-             <HoverText as="a" href={data.url} target="_blank" rel="noopener noreferrer" text={data.title} className="text-block" />
-          </div>
-          <div className="grid_item">
-            <HoverText text={data.description} className="text-block" />
+             <HoverText as="a" href={`#/project/${data.slug}`} text={data.title} className="text-block" />
           </div>
         </div>
       ))}

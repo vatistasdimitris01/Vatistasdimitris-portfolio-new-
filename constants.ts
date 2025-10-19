@@ -22,14 +22,15 @@ export const connect: ConnectInfo = {
 };
 
 export const projects: ProjectData[] = [
-  { id: '01', title: "GenGlow", description: "An AI-powered platform that generates personalized skincare routines based on user preferences and skin profiles.", url: "https://genglow.vercel.app/" },
-  { id: '02', title: "MoodMenu", description: "A smart menu generator that creates meal recommendations based on mood and dietary preferences.", url: "https://moodmenu.vercel.app/" },
-  { id: '03', title: "QBIT AI", description: "An AI-powered assistant designed to help users manage tasks and queries efficiently.", url: "https://qbitai.vercel.app/" },
-  { id: '04', title: "ImageFM", description: "A creative AI platform that generates images from user prompts with a music-inspired twist.", url: "https://imagefm.vercel.app/" },
-  { id: '05', title: "AI Digrm", description: "An AI diagram generator that converts text into structured, visual diagrams instantly.", url: "https://ai-digrm.vercel.app/" },
-  { id: '06', title: "Fortnite Vibe Coder", description: "A playful project that codes custom Fortnite-inspired 'vibes' into experiences.", url: "https://fortnitevibecoder.vercel.app/" },
-  { id: '07', title: "QRoyal", description: "A smart digital loyalty program that replaces physical cards with one universal QR-based pass.", url: "https://qroyal.vercel.app/" },
-  { id: '08', title: "AI Age Verification", description: "A secure, privacy-first system for frictionless AI-based age verification.", url: "https://ai-age-verification.vercel.app/" }
+  { id: '01', title: "VD Search", description: "VD Search is a sleek, custom web and image search engine that provides a fast and clean browsing experience.", url: "https://vd-search.vercel.app/", slug: "vd-search" },
+  { id: '02', title: "AI Age Verification", description: "A secure, privacy-first system for frictionless AI-based age verification.", url: "https://ai-age-verification.vercel.app/", slug: "ai-age-verification" },
+  { id: '03', title: "QRoyal", description: "A smart digital loyalty program that replaces physical cards with one universal QR-based pass.", url: "https://qroyal.vercel.app/", slug: "qroyal" },
+  { id: '04', title: "Fortnite Vibe Coder", description: "A playful project that codes custom Fortnite-inspired 'vibes' into experiences.", url: "https://fortnitevibecoder.vercel.app/", slug: "fortnite-vibe-coder" },
+  { id: '05', title: "AI Digrm", description: "An AI diagram generator that converts text into structured, visual diagrams instantly.", url: "https://ai-digrm.vercel.app/", slug: "ai-digrm" },
+  { id: '06', title: "ImageFM", description: "A creative AI platform that generates images from user prompts with a music-inspired twist.", url: "https://imagefm.vercel.app/", slug: "imagefm" },
+  { id: '07', title: "QBIT AI", description: "An AI-powered assistant designed to help users manage tasks and queries efficiently.", url: "https://qbitai.vercel.app/", slug: "qbit-ai" },
+  { id: '08', title: "MoodMenu", description: "A smart menu generator that creates meal recommendations based on mood and dietary preferences.", url: "https://moodmenu.vercel.app/", slug: "moodmenu" },
+  { id: '09', title: "GenGlow", description: "An AI-powered platform that generates personalized skincare routines based on user preferences and skin profiles.", url: "https://genglow.vercel.app/", slug: "genglow" }
 ];
 
 // FIX: Add eruptions data to resolve import error in EruptionsSection.

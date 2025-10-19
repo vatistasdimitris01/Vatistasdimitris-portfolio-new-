@@ -69,8 +69,14 @@ const HoverText: React.FC<HoverTextProps> = ({ text, as: Component = 'div', clas
     
     triggerElement.addEventListener('mouseenter', animate);
 
+    // Animate on load. A small delay can make it feel smoother.
+    const onLoadTimeout = setTimeout(animate, 100);
+
     return () => {
       triggerElement.removeEventListener('mouseenter', animate);
+      clearTimeout(onLoadTimeout);
+      // Kill any running animations when the component unmounts.
+      gsap.killTweensOf(chars);
     };
   }, [text]);
 

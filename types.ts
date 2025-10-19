@@ -16,11 +16,12 @@ export interface ProjectData {
   title: string;
   description: string;
   url: string;
+  slug: string;
 }
 
 export interface SocialLink {
     platform: string;
-    url: string;
+    url:string;
 }
 
 export interface ConnectInfo {

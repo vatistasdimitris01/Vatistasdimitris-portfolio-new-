@@ -1,0 +1,82 @@
+// This is the code responsible for the letter-scrambling hover effect,
+// extracted from the HoverText.tsx component. It uses the GSAP library for animations.
+
+// Array of characters used for the scrambling effect.
+const lettersAndSymbols = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '!', '@', '#', '$', '%', '^', '&', '*', '-', '_', '+', '=', ';', ':', '<', '>', ','];
+
+// The main animation logic is contained within a React useEffect hook.
+useEffect(() => {
+    // A reference to the DOM element that will contain the text.
+    const element = elementRef.current;
+    if (!element) return;
+
+    // The initial text is split into words and then into individual characters.
+    // Each character is wrapped in a <span> to allow for individual animation.
+    const words = text.split(' ');
+    element.innerHTML = words.map(word => {
+      const chars = word.split('').map(char => `<span class="char">${char === ' ' ? '&nbsp;' : char}</span>`).join('');
+      return `<span class="word">${chars}</span>`;
+    }).join('');
+
+    // Get all the character spans and store their original content.
+    const chars = Array.from(element.querySelectorAll('.char')) as HTMLElement[];
+    const originalChars = chars.map(c => c.innerHTML);
+
+    // This function runs when the mouse enters the trigger element.
+    const animate = () => {
+      // Cancel any ongoing animations on the characters to prevent conflicts.
+      gsap.killTweensOf(chars);
+      
+      // Loop through each character and apply a staggered animation.
+      chars.forEach((char, position) => {
+        const initialHTML = originalChars[position];
+        let repeatCount = 0;
+
+        // GSAP's fromTo() animates from a starting state to an ending state.
+        gsap.fromTo(char, 
+          { 
+            opacity: 0 // Start invisible.
+          }, 
+          {
+            duration: 0.03,
+            // On each step of the animation, set the character to a random symbol.
+            innerHTML: () => lettersAndSymbols[Math.floor(Math.random() * lettersAndSymbols.length)],
+            opacity: 1, // Fade in.
+            repeat: 3, // Number of times to scramble before revealing the original character.
+            repeatRefresh: true, // Re-run the innerHTML function on each repeat.
+            repeatDelay: 0.04,
+            delay: (position + 1) * 0.07, // Stagger the start time for a cascading effect.
+            onStart: () => {
+              // This custom CSS variable is used for the blocky "cursor" effect.
+              gsap.set(char, { '--opa': 1 });
+            },
+            onRepeat: () => {
+              repeatCount++;
+              if (repeatCount === 1) {
+                // Hide the cursor effect after the first scramble.
+                gsap.set(char, { '--opa': 0 });
+              }
+            },
+            onComplete: () => {
+              // Once the animation is complete, restore the original character.
+              gsap.set(char, { 
+                innerHTML: initialHTML,
+                delay: 0.03
+              });
+            },
+          }
+        );
+      });
+    };
+
+    // The animation can be triggered by hovering over the element itself or a parent list item.
+    const triggerElement = element.closest('.grid_list, .nav_item') || element;
+    
+    // Attach the animation function to the 'mouseenter' event.
+    triggerElement.addEventListener('mouseenter', animate);
+
+    // Cleanup function: remove the event listener when the component is no longer on screen.
+    return () => {
+      triggerElement.removeEventListener('mouseenter', animate);
+    };
+}, [text]); // This hook re-runs if the 'text' prop changes.
