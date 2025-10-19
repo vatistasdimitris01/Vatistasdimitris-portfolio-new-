@@ -19,7 +19,7 @@ const Nav: React.FC<NavProps> = ({ animationsEnabled, toggleAnimations }) => {
             as="div"
             onClick={toggleLanguage}
             text={`[ ${language === 'en' ? 'EN' : 'GR'} ]`}
-            className="animation-toggle"
+            className="language-toggle"
             disabled={true}
           />
           <HoverText
