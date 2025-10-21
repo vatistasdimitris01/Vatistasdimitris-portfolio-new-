@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-g" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <title>Dimitris Vatistas - Web Developer & Designer Portfolio</title>
@@ -34,25 +34,47 @@
       :root {
         font-size: 16px; /* Base font size */
         
-        /* Dark Theme (Default) */
-        --bg-color: #080808;
-        --text-color: #e0e0e0;
-        --border-color: rgba(255, 255, 255, 0.1);
-        --scanline-color: rgba(255, 255, 255, 0.05);
-        --social-icon-fill: #e0e0e0;
+        /* Theme Colors */
+        --bg-color-dark: #080808;
+        --text-color-dark: #e0e0e0;
+        --border-color-dark: rgba(255, 255, 255, 0.1);
+        --scanline-color-dark: rgba(255, 255, 255, 0.05);
+        --social-icon-fill-dark: #e0e0e0;
+
+        --bg-color-light: #f8f8f8;
+        --text-color-light: #222222;
+        --border-color-light: rgba(0, 0, 0, 0.1);
+        --scanline-color-light: rgba(0, 0, 0, 0.03);
       }
 
       body {
         margin: 0;
-        color: var(--text-color);
-        background-color: var(--bg-color);
         font-family: "JetBrains Mono", monospace;
         font-weight: 300;
         font-optical-sizing: auto;
         text-transform: uppercase;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+
+        /* Default to Dark Theme */
+        --bg-color: var(--bg-color-dark);
+        --text-color: var(--text-color-dark);
+        --border-color: var(--border-color-dark);
+        --scanline-color: var(--scanline-color-dark);
+        --social-icon-fill: var(--social-icon-fill-dark);
+
+        color: var(--text-color);
+        background-color: var(--bg-color);
       }
+
+      body.light-theme {
+        --bg-color: var(--bg-color-light);
+        --text-color: var(--text-color-light);
+        --border-color: var(--border-color-light);
+        --scanline-color: var(--scanline-color-light);
+        --social-icon-fill: var(--text-color-light);
+      }
+
       body.no-scroll {
         overflow: hidden;
       }
@@ -151,6 +173,12 @@
         user-select: none;
       }
 
+      .theme-toggle {
+        cursor: pointer;
+        font-size: 1.1rem;
+        user-select: none;
+      }
+
       /* Burger Menu Styles */
       .burger-menu {
         display: none;
@@ -226,7 +254,8 @@
           font-size: 1.25rem;
           cursor: pointer;
       }
-       .nav-panel .language-toggle {
+       .nav-panel .language-toggle,
+       .nav-panel .theme-toggle {
         font-size: 1.25rem;
       }
 

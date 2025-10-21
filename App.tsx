@@ -4,12 +4,18 @@ import HeroSection from './components/HeroSection';
 import WorkExperienceSection from './components/WorkExperienceSection';
 import ProjectsSection from './components/ProjectsSection';
 import BurgerMenu from './components/BurgerMenu';
+import { useTheme } from './contexts/ThemeContext';
 
 const App: React.FC = () => {
   const [animationsEnabled, setAnimationsEnabled] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { theme } = useTheme();
 
   useEffect(() => {
+    // Apply theme class to body
+    document.body.classList.remove('dark-theme', 'light-theme');
+    document.body.classList.add(`${theme}-theme`);
+
     if (isMenuOpen) {
       document.body.classList.add('no-scroll');
     } else {
@@ -18,8 +24,9 @@ const App: React.FC = () => {
 
     return () => {
       document.body.classList.remove('no-scroll');
+      document.body.classList.remove('dark-theme', 'light-theme');
     };
-  }, [isMenuOpen]);
+  }, [isMenuOpen, theme]);
 
   const toggleAnimations = () => {
     setAnimationsEnabled(prev => !prev);

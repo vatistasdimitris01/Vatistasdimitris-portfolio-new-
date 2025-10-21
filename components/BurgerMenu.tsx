@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { useTheme } from '../contexts/ThemeContext'; // Import useTheme
 import HoverText from './HoverText';
 
 interface BurgerMenuProps {
@@ -9,6 +10,8 @@ interface BurgerMenuProps {
 
 const BurgerMenu: React.FC<BurgerMenuProps> = ({ isOpen, toggleMenu }) => {
   const { language, toggleLanguage, t } = useLanguage();
+  // Removed `toggleTheme` from useTheme as it's no longer manually toggled
+  const { theme } = useTheme(); 
 
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
@@ -29,6 +32,7 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ isOpen, toggleMenu }) => {
             <a onClick={() => scrollToSection('work-experience')}>{t.workExperience.title}</a>
             <a onClick={() => scrollToSection('projects')}>{t.projects.title}</a>
         </div>
+        {/* Removed theme toggle HoverText */}
         <HoverText
           as="div"
           onClick={toggleLanguage}

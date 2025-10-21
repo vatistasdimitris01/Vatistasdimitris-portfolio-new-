@@ -1,6 +1,7 @@
 import React from 'react';
 import HoverText from './HoverText';
 import { useLanguage } from '../contexts/LanguageContext';
+import { useTheme } from '../contexts/ThemeContext'; // Import useTheme
 
 interface NavProps {
   animationsEnabled: boolean;
@@ -9,12 +10,15 @@ interface NavProps {
 
 const Nav: React.FC<NavProps> = ({ animationsEnabled, toggleAnimations }) => {
   const { t, language, toggleLanguage } = useLanguage();
+  // Removed `toggleTheme` from useTheme as it's no longer manually toggled
+  const { theme } = useTheme(); 
 
   return (
     <div className="nav_component">
       <div className="nav_list">
         <HoverText as="a" href="#" text={t.nav.name} className="nav-title nav-name" disabled={!animationsEnabled} />
         <div className="nav_item">
+          {/* Removed theme toggle HoverText */}
           <HoverText
             as="div"
             onClick={toggleLanguage}
