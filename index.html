@@ -37,6 +37,9 @@
     
     <!-- Marked.js for Markdown rendering -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <!-- Chart.js for code-generated graphs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <style>
       *, *::after, *::before { box-sizing: border-box; }
@@ -332,6 +335,18 @@
           width: fit-content;
       }
 
+      .chart-container {
+        position: relative;
+        height: 50vh;
+        width: 100%;
+        max-width: 700px;
+        margin: 2rem auto;
+        padding: 1rem;
+        background-color: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+      }
+
       @media screen and (min-width: 768px) {
         .animation-toggle {
           display: block; /* Visible on desktop */
@@ -370,6 +385,10 @@
         .blog-post-nav {
           flex-direction: column;
           gap: 1rem;
+        }
+        .chart-container {
+            width: 90vw;
+            height: 40vh;
         }
       }
 

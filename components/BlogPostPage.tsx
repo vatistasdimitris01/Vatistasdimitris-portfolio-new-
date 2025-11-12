@@ -10,7 +10,13 @@ declare global {
       parse: (markdown: string) => string;
     };
     renderMathInElement: (element: HTMLElement, options: object) => void;
+    Chart: any; // Add Chart.js to global window interface
   }
+}
+
+// FIX: Define a simple interface for the Chart instance to provide type safety for the destroy method.
+interface ChartInstance {
+  destroy: () => void;
 }
 
 interface BlogPostPageProps {
@@ -21,28 +27,38 @@ interface BlogPostPageProps {
 const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, animationsEnabled }) => {
   const { t } = useLanguage();
   const contentRef = useRef<HTMLDivElement>(null);
+  // FIX: Use the ChartInstance interface for the ref to ensure type-safe access to chart methods.
+  const chartInstances = useRef<{ [key: string]: ChartInstance }>({});
+
+  useEffect(() => {
+    // Cleanup function to destroy charts when component unmounts or post changes
+    return () => {
+      // FIX: The `chart` variable is now correctly typed, resolving the error on `destroy()`.
+      Object.values(chartInstances.current).forEach(chart => chart.destroy());
+      chartInstances.current = {};
+    };
+  }, [post]);
 
   useEffect(() => {
     if (post && contentRef.current && window.marked && window.renderMathInElement) {
+      // Destroy previous charts before rendering new ones
+      // FIX: The `chart` variable is now correctly typed, resolving the error on `destroy()`.
+      Object.values(chartInstances.current).forEach(chart => chart.destroy());
+      chartInstances.current = {};
+
       let content = post.content;
       const mathExpressions: string[] = [];
       const placeholder = (index: number) => `%%LATEX_PLACEHOLDER_${index}%%`;
-
-      // Regex to find content between \(...\) and \[...\], which are used in the blog posts.
-      // This is to protect the LaTeX expressions from being misinterpreted by the Markdown parser.
       const mathRegex = /(\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\))/g;
 
-      // 1. Replace all math expressions with a unique placeholder.
       content = content.replace(mathRegex, (match) => {
         const index = mathExpressions.length;
         mathExpressions.push(match);
         return placeholder(index);
       });
 
-      // 2. Parse the sanitized markdown content into HTML.
       let html = window.marked.parse(content);
       
-      // 3. Restore the original math expressions into the generated HTML.
       html = html.replace(/%%LATEX_PLACEHOLDER_(\d+)%%/g, (_, indexStr) => {
         const index = parseInt(indexStr, 10);
         return mathExpressions[index];
@@ -50,7 +66,6 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, animationsEnabled }) 
       
       contentRef.current.innerHTML = html;
       
-      // 4. Let KaTeX find and render the math expressions now present in the DOM.
       window.renderMathInElement(contentRef.current, {
         delimiters: [
           { left: '$$', right: '$$', display: true },
@@ -58,10 +73,91 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, animationsEnabled }) 
           { left: '$', right: '$', display: false },
           { left: '\\(', right: '\\)', display: false },
         ],
-        throwOnError: false, // Prevents crashing on a parse error
+        throwOnError: false,
       });
+
+      // Render charts
+      if (window.Chart) {
+        renderCharts();
+      }
     }
   }, [post]);
+
+  const renderCharts = () => {
+    const chartCanvases = contentRef.current?.querySelectorAll('canvas');
+    if (!chartCanvases) return;
+
+    const theme = document.body.classList.contains('light-theme') ? 'light' : 'dark';
+    const gridColor = theme === 'light' ? 'rgba(0, 0, 0, 0.1)' : 'rgba(255, 255, 255, 0.1)';
+    const textColor = theme === 'light' ? '#222222' : '#e0e0e0';
+
+    chartCanvases.forEach(canvas => {
+      const chartId = canvas.id;
+      const chartFunction = canvas.dataset.chartFunction;
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
+
+      let chartData: { labels: any[], datasets: any[] } = { labels: [], datasets: [] };
+
+      if (chartFunction === 'parabola') {
+        const a = parseFloat(canvas.dataset.a || '1');
+        const b = parseFloat(canvas.dataset.b || '0');
+        const c = parseFloat(canvas.dataset.c || '0');
+        const labels = Array.from({ length: 21 }, (_, i) => i - 10);
+        const data = labels.map(x => a * x * x + b * x + c);
+        chartData = {
+          labels,
+          datasets: [{
+            label: `f(x) = ${a}x² + ${b}x + ${c}`,
+            data,
+            borderColor: '#36a2eb',
+            tension: 0.1,
+            fill: false,
+          }]
+        };
+      } else if (chartFunction === 'sine') {
+        const amplitude = parseFloat(canvas.dataset.amplitude || '1');
+        const frequency = parseFloat(canvas.dataset.frequency || '1');
+        const labels = Array.from({ length: 100 }, (_, i) => (i * 4 * Math.PI) / 99);
+        const data = labels.map(x => amplitude * Math.sin(frequency * x));
+         chartData = {
+          labels: labels.map(l => l.toFixed(2)),
+          datasets: [{
+            label: `x(t) = ${amplitude}sin(${frequency}t)`,
+            data,
+            borderColor: '#ff6384',
+            tension: 0.1,
+            fill: false,
+          }]
+        };
+      }
+      
+      if (chartData.labels.length > 0) {
+        chartInstances.current[chartId] = new window.Chart(ctx, {
+          type: 'line',
+          data: chartData,
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { labels: { color: textColor, font: { family: "'JetBrains Mono', monospace" } } },
+                tooltip: { bodyFont: { family: "'JetBrains Mono', monospace" }, titleFont: { family: "'JetBrains Mono', monospace" } }
+            },
+            scales: {
+              y: { 
+                  ticks: { color: textColor, font: { family: "'JetBrains Mono', monospace" } },
+                  grid: { color: gridColor }
+              },
+              x: { 
+                  ticks: { color: textColor, font: { family: "'JetBrains Mono', monospace" } },
+                  grid: { color: gridColor }
+              },
+            }
+          }
+        });
+      }
+    });
+  };
 
   if (!post) {
     return (

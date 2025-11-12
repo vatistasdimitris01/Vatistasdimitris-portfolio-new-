@@ -66,7 +66,7 @@ export const translations: { en: Translations; el: Translations } = {
           {
             id: '01',
             slug: 'what-is-time',
-            title: '🕰️ What Is Time?',
+            title: 'What Is Time?',
             date: '2024-09-05',
             excerpt: 'Time is the axis along which change is measured — yet its nature remains one of physics’ deepest puzzles.',
             content: `Time is the axis along which change is measured — yet its nature remains one of physics’ deepest puzzles.
@@ -110,7 +110,7 @@ I believe time is both an illusion and an indispensable tool — not a thing tha
           {
             id: '02',
             slug: 'is-time-fundamental-or-emergent',
-            title: '⏳ Is Time Fundamental or Emergent?',
+            title: 'Is Time Fundamental or Emergent?',
             date: '2024-09-04',
             excerpt: 'The deeper we probe physics, the more time seems to dissolve. In many quantum-gravity equations, time never appears at all.',
             content: `The deeper we probe physics, the more time seems to dissolve. In many quantum-gravity equations, time never appears at all. The Wheeler–DeWitt equation \\( \\hat{H}\\Psi = 0 \\) is timeless — the universe as a static configuration of all possible states.
@@ -139,7 +139,7 @@ So perhaps time isn’t a universal backdrop but an emergent parameter of relati
           {
             id: '03',
             slug: 'reconcile-quantum-mechanics-and-general-relativity',
-            title: '🧮 Can We Reconcile Quantum Mechanics and General Relativity?',
+            title: 'Can We Reconcile Quantum Mechanics and General Relativity?',
             date: '2024-09-03',
             excerpt: 'Quantum mechanics and relativity are both right — but they speak incompatible languages.',
             content: `Quantum mechanics and relativity are both right — but they speak incompatible languages.
@@ -181,7 +181,7 @@ I believe unification may require a radical shift — perhaps geometry and quant
           {
             id: '04',
             slug: 'what-happens-inside-a-black-hole',
-            title: '🕳️ What Happens Inside a Black Hole — Is Information Lost?',
+            title: 'What Happens Inside a Black Hole — Is Information Lost?',
             date: '2024-09-02',
             excerpt: 'In general relativity, the Schwarzschild metric defines spacetime around a non-rotating black hole.',
             content: `In general relativity, the Schwarzschild metric defines spacetime around a non-rotating black hole:
@@ -218,7 +218,7 @@ I believe black holes are not ends but archives — where matter, energy, and in
           {
             id: '05',
             slug: 'are-there-undiscovered-dimensions',
-            title: '🌈 Are There Undiscovered Dimensions Beyond the Known Four?',
+            title: 'Are There Undiscovered Dimensions Beyond the Known Four?',
             date: '2024-09-01',
             excerpt: 'We experience three spatial dimensions and one of time, but the mathematics of modern physics suggests more.',
             content: `We experience three spatial dimensions and one of time, but the mathematics of modern physics suggests more.
@@ -249,7 +249,7 @@ I believe unseen dimensions may not be “places” but mathematical degrees of 
           {
             id: '06',
             slug: 'why-are-the-laws-of-physics-the-way-they-are',
-            title: '⚙️ Why Are the Laws of Physics the Way They Are?',
+            title: 'Why Are the Laws of Physics the Way They Are?',
             date: '2024-08-31',
             excerpt: 'Every equation seems fine-tuned for existence. The strength of gravity G, the fine-structure constant α ≈ 1/137, and the cosmological constant Λ are balanced with astonishing precision.',
             content: `Every equation seems fine-tuned for existence. The strength of gravity \\( G \\), the fine-structure constant \\( \\alpha \\approx 1/137 \\), and the cosmological constant \\( \\Lambda \\) are balanced with astonishing precision.
@@ -273,6 +273,69 @@ I believe the laws are the poetry of reality — patterns that repeat because th
 - Roger Penrose — *The Road to Reality*
 - Max Tegmark — *Our Mathematical Universe*
 - Stephen Hawking — *The Grand Design*`
+          },
+          {
+            id: '07',
+            slug: 'the-parabola-quadratic-equations',
+            title: 'The Parabola: A Visual Journey into Quadratic Equations',
+            date: '2024-08-30',
+            excerpt: 'From the arc of a thrown ball to the shape of a satellite dish, the parabola is everywhere. Let\'s explore the simple but powerful quadratic equation behind this elegant curve.',
+            content: `From the arc of a thrown ball to the shape of a satellite dish, the parabola is everywhere. This elegant curve is described by a simple but powerful algebraic expression: the quadratic equation.
+
+A **quadratic equation** is any equation that can be rearranged in standard form as
+\\[
+ax^2 + bx + c = 0
+\\]
+where \\(x\\) represents an unknown, and \\(a\\), \\(b\\), and \\(c\\) represent known numbers, where \\(a \\neq 0\\). The graph of a quadratic function \\(f(x) = ax^2 + bx + c\\) is a parabola.
+
+The **coefficients** play a crucial role:
+- \\(a\\) determines whether the parabola opens upwards (\\(a > 0\\)) or downwards (\\(a < 0\\)).
+- \\(b\\) shifts the axis of symmetry.
+- \\(c\\) is the y-intercept, where the curve crosses the vertical axis.
+
+To find where the parabola crosses the x-axis (the roots of the equation), we use the **quadratic formula**:
+\\[
+x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}
+\\]
+
+Below is an interactive graph of the function \\(f(x) = x^2 - 2x - 3\\). You can see how its shape corresponds to the coefficients \\(a=1, b=-2, c=-3\\).
+
+<div class="chart-container">
+  <canvas id="parabola-chart" data-chart-function="parabola" data-a="1" data-b="-2" data-c="-3"></canvas>
+</div>
+
+Understanding the parabola is a gateway to understanding more complex systems in physics, engineering, and even finance.`
+          },
+          {
+            id: '08',
+            slug: 'simple-harmonic-motion',
+            title: 'The Rhythm of the Universe: Simple Harmonic Motion',
+            date: '2024-08-29',
+            excerpt: 'From a swinging pendulum to the vibrations of a guitar string, many phenomena in our universe follow a simple, repeating pattern. This is the dance of Simple Harmonic Motion.',
+            content: `From a swinging pendulum to the vibrations of a guitar string, many phenomena in our universe follow a simple, repeating pattern. This is the dance of **Simple Harmonic Motion (SHM)**.
+
+SHM occurs when the restoring force acting on an object is directly proportional to the object's displacement from its equilibrium position. This relationship is described by Hooke's Law:
+\\[
+F = -kx
+\\]
+where \\(F\\) is the restoring force, \\(x\\) is the displacement, and \\(k\\) is a positive constant known as the force constant.
+
+The solution to this equation of motion describes the position of the object over time, which turns out to be a sinusoidal function:
+\\[
+x(t) = A \\cos(\\omega t + \\phi)
+\\]
+This equation has three key parameters:
+- **Amplitude (\\(A\\))**: The maximum displacement from the equilibrium position.
+- **Angular Frequency (\\(\\omega\\))**: Related to how fast the oscillations occur (\\(\\omega = 2\\pi f\\)).
+- **Phase (\\(\\phi\\))**: Determines the starting position of the object at \\(t=0\\).
+
+Below is a graph illustrating the position of an object in Simple Harmonic Motion over time. This characteristic wave pattern is the fundamental rhythm found in light, sound, and countless other physical systems.
+
+<div class="chart-container">
+  <canvas id="sine-wave-chart" data-chart-function="sine" data-amplitude="5" data-frequency="1"></canvas>
+</div>
+
+SHM is a cornerstone of physics, providing the foundational model for understanding waves and oscillations.`
           },
         ]
     }
@@ -319,7 +382,7 @@ I believe the laws are the poetry of reality — patterns that repeat because th
           {
             id: '01',
             slug: 'what-is-time',
-            title: '🕰️ Τι Είναι ο Χρόνος;',
+            title: 'Τι Είναι ο Χρόνος;',
             date: '2024-09-05',
             excerpt: 'Ο χρόνος είναι ο άξονας κατά μήκος του οποίου μετριέται η αλλαγή — όμως η φύση του παραμένει ένα από τα βαθύτερα αινίγματα της φυσικής.',
             content: `Ο χρόνος είναι ο άξονας κατά μήκος του οποίου μετριέται η αλλαγή — όμως η φύση του παραμένει ένα από τα βαθύτερα αινίγματα της φυσικής.
@@ -363,7 +426,7 @@ d\\tau = \\sqrt{1 - \\frac{2GM}{rc^2}}\\, dt.
           {
             id: '02',
             slug: 'is-time-fundamental-or-emergent',
-            title: '⏳ Είναι ο Χρόνος Θεμελιώδης ή Αναδυόμενος;',
+            title: 'Είναι ο Χρόνος Θεμελιώδης ή Αναδυόμενος;',
             date: '2024-09-04',
             excerpt: 'Όσο βαθύτερα ερευνούμε τη φυσική, τόσο περισσότερο ο χρόνος φαίνεται να διαλύεται. Σε πολλές εξισώσεις κβαντικής βαρύτητας, ο χρόνος δεν εμφανίζεται καθόλου.',
             content: `Όσο βαθύτερα ερευνούμε τη φυσική, τόσο περισσότερο ο χρόνος φαίνεται να διαλύεται. Σε πολλές εξισώσεις κβαντικής βαρύτητας, ο χρόνος δεν εμφανίζεται καθόλου. Η εξίσωση Wheeler–DeWitt \\( \\hat{H}\\Psi = 0 \\) είναι άχρονη — το σύμπαν ως μια στατική διαμόρφωση όλων των πιθανών καταστάσεων.
@@ -392,7 +455,7 @@ d\\tau = \\sqrt{1 - \\frac{2GM}{rc^2}}\\, dt.
           {
             id: '03',
             slug: 'reconcile-quantum-mechanics-and-general-relativity',
-            title: '🧮 Μπορούμε να Συμφιλιώσουμε την Κβαντική Μηχανική και τη Γενική Σχετικότητα;',
+            title: 'Μπορούμε να Συμφιλιώσουμε την Κβαντική Μηχανική και τη Γενική Σχετικότητα;',
             date: '2024-09-03',
             excerpt: 'Η κβαντική μηχανική και η σχετικότητα είναι και οι δύο σωστές — αλλά μιλούν ασύμβατες γλώσσες.',
             content: `Η κβαντική μηχανική και η σχετικότητα είναι και οι δύο σωστές — αλλά μιλούν ασύμβατες γλώσσες.
@@ -434,7 +497,7 @@ A = 8\\pi\\gamma l_P^2 \\sum_i \\sqrt{j_i(j_i + 1)},
           {
             id: '04',
             slug: 'what-happens-inside-a-black-hole',
-            title: '🕳️ Τι Συμβαίνει Μέσα σε μια Μαύρη Τρύπα — Χάνεται η Πληροφορία;',
+            title: 'Τι Συμβαίνει Μέσα σε μια Μαύρη Τρύπα — Χάνεται η Πληροφορία;',
             date: '2024-09-02',
             excerpt: 'Στη γενική σχετικότητα, η μετρική Schwarzschild ορίζει τον χωροχρόνο γύρω από μια μη περιστρεφόμενη μαύρη τρύπα.',
             content: `Στη γενική σχετικότητα, η μετρική Schwarzschild ορίζει τον χωροχρόνο γύρω από μια μη περιστρεφόμενη μαύρη τρύπα:
@@ -471,7 +534,7 @@ S = \\frac{k_B A}{4 l_P^2}.
           {
             id: '05',
             slug: 'are-there-undiscovered-dimensions',
-            title: '🌈 Υπάρχουν Ανεξερεύνητες Διαστάσεις Πέρα από τις Γνωστές Τέσσερις;',
+            title: 'Υπάρχουν Ανεξερεύνητες Διαστάσεις Πέρα από τις Γνωστές Τέσσερις;',
             date: '2024-09-01',
             excerpt: 'Βιώνουμε τρεις χωρικές διαστάσεις και μία του χρόνου, αλλά τα μαθηματικά της σύγχρονης φυσικής υποδηλώνουν περισσότερες.',
             content: `Βιώνουμε τρεις χωρικές διαστάσεις και μία του χρόνου, αλλά τα μαθηματικά της σύγχρονης φυσικής υποδηλώνουν περισσότερες.
@@ -502,7 +565,7 @@ R_{AB} = 0 \\quad (A,B = 0...4).
           {
             id: '06',
             slug: 'why-are-the-laws-of-physics-the-way-they-are',
-            title: '⚙️ Γιατί οι Νόμοι της Φυσικής Είναι Έτσι όπως Είναι;',
+            title: 'Γιατί οι Νόμοι της Φυσικής Είναι Έτσι όπως Είναι;',
             date: '2024-08-31',
             excerpt: 'Κάθε εξίσωση φαίνεται τελειοποιημένη για την ύπαρξη. Η ισχύς της βαρύτητας G, η σταθερά λεπτής υφής α ≈ 1/137, και η κοσμολογική σταθερά Λ είναι ισορροπημένες με εκπληκτική ακρίβεια.',
             content: `Κάθε εξίσωση φαίνεται τελειοποιημένη για την ύπαρξη. Η ισχύς της βαρύτητας \\( G \\), η σταθερά λεπτής υφής \\( \\alpha \\approx 1/137 \\), και η κοσμολογική σταθερά \\( \\Lambda \\) είναι ισορροπημένες με εκπληκτική ακρίβεια.
@@ -526,6 +589,69 @@ S = \\frac{c^3}{16\\pi G} \\int R \\sqrt{-g}\\, d^4x.
 - Roger Penrose — *The Road to Reality*
 - Max Tegmark — *Our Mathematical Universe*
 - Stephen Hawking — *The Grand Design*`
+          },
+          {
+            id: '07',
+            slug: 'the-parabola-quadratic-equations',
+            title: 'Η Παραβολή: Ένα Οπτικό Ταξίδι στις Δευτεροβάθμιες Εξισώσεις',
+            date: '2024-08-30',
+            excerpt: 'Από την τροχιά μιας μπάλας που πετιέται μέχρι το σχήμα ενός δορυφορικού πιάτου, η παραβολή είναι παντού. Ας εξερευνήσουμε την απλή αλλά ισχυρή δευτεροβάθμια εξίσωση πίσω από αυτή την κομψή καμπύλη.',
+            content: `Από την τροχιά μιας μπάλας που πετιέται μέχρι το σχήμα ενός δορυφορικού πιάτου, η παραβολή είναι παντού. Αυτή η κομψή καμπύλη περιγράφεται από μια απλή αλλά ισχυρή αλγεβρική παράσταση: τη δευτεροβάθμια εξίσωση.
+
+Μια **δευτεροβάθμια εξίσωση** είναι οποιαδήποτε εξίσωση μπορεί να αναδιαταχθεί στην τυπική μορφή ως
+\\[
+ax^2 + bx + c = 0
+\\]
+όπου το \\(x\\) αντιπροσωπεύει έναν άγνωστο, και τα \\(a\\), \\(b\\), και \\(c\\) αντιπροσωπεύουν γνωστούς αριθμούς, όπου \\(a \\neq 0\\). Το γράφημα μιας δευτεροβάθμιας συνάρτησης \\(f(x) = ax^2 + bx + c\\) είναι μια παραβολή.
+
+Οι **συντελεστές** παίζουν καθοριστικό ρόλο:
+- Το \\(a\\) καθορίζει αν η παραβολή ανοίγει προς τα πάνω (\\(a > 0\\)) ή προς τα κάτω (\\(a < 0\\)).
+- Το \\(b\\) μετατοπίζει τον άξονα συμμετρίας.
+- Το \\(c\\) είναι το σημείο τομής με τον άξονα y, όπου η καμπύλη τέμνει τον κατακόρυφο άξονα.
+
+Για να βρούμε πού η παραβολή τέμνει τον άξονα x (τις ρίζες της εξίσωσης), χρησιμοποιούμε τον **τύπο της δευτεροβάθμιας εξίσωσης**:
+\\[
+x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}
+\\]
+
+Παρακάτω υπάρχει ένα διαδραστικό γράφημα της συνάρτησης \\(f(x) = x^2 - 2x - 3\\). Μπορείτε να δείτε πώς το σχήμα της αντιστοιχεί στους συντελεστές \\(a=1, b=-2, c=-3\\).
+
+<div class="chart-container">
+  <canvas id="parabola-chart" data-chart-function="parabola" data-a="1" data-b="-2" data-c="-3"></canvas>
+</div>
+
+Η κατανόηση της παραβολής είναι μια πύλη για την κατανόηση πιο σύνθετων συστημάτων στη φυσική, τη μηχανική, ακόμη και στα οικονομικά.`
+          },
+          {
+            id: '08',
+            slug: 'simple-harmonic-motion',
+            title: 'Ο Ρυθμός του Σύμπαντος: Απλή Αρμονική Ταλάντωση',
+            date: '2024-08-29',
+            excerpt: 'Από ένα εκκρεμές που αιωρείται μέχρι τις δονήσεις μιας χορδής κιθάρας, πολλά φαινόμενα στο σύμπαν μας ακολουθούν ένα απλό, επαναλαμβανόμενο μοτίβο. Αυτός είναι ο χορός της Απλής Αρμονικής Ταλάντωσης.',
+            content: `Από ένα εκκρεμές που αιωρείται μέχρι τις δονήσεις μιας χορδής κιθάρας, πολλά φαινόμενα στο σύμπαν μας ακολουθούν ένα απλό, επαναλαμβανόμενο μοτίβο. Αυτός είναι ο χορός της **Απλής Αρμονικής Ταλάντωσης (ΑΑΤ)**.
+
+Η ΑΑΤ συμβαίνει όταν η δύναμη επαναφοράς που δρα σε ένα αντικείμενο είναι ευθέως ανάλογη της μετατόπισης του αντικειμένου από τη θέση ισορροπίας του. Αυτή η σχέση περιγράφεται από τον Νόμο του Hooke:
+\\[
+F = -kx
+\\]
+όπου \\(F\\) είναι η δύναμη επαναφοράς, \\(x\\) είναι η μετατόπιση, και \\(k\\) είναι μια θετική σταθερά γνωστή ως σταθερά δύναμης.
+
+Η λύση αυτής της εξίσωσης κίνησης περιγράφει τη θέση του αντικειμένου με την πάροδο του χρόνου, η οποία αποδεικνύεται ότι είναι μια ημιτονοειδής συνάρτηση:
+\\[
+x(t) = A \\cos(\\omega t + \\phi)
+\\]
+Αυτή η εξίσωση έχει τρεις βασικές παραμέτρους:
+- **Πλάτος (\\(A\\))**: Η μέγιστη μετατόπιση από τη θέση ισορροπίας.
+- **Γωνιακή Συχνοτήτα (\\(\\omega\\))**: Σχετίζεται με το πόσο γρήγορα συμβαίνουν οι ταλαντώσεις (\\(\\omega = 2\\pi f\\)).
+- **Φάση (\\(\\phi\\))**: Καθορίζει την αρχική θέση του αντικειμένου τη χρονική στιγμή \\(t=0\\).
+
+Παρακάτω είναι ένα γράφημα που απεικονίζει τη θέση ενός αντικειμένου σε Απλή Αρμονική Ταλάντωση με την πάροδο του χρόνου. Αυτό το χαρακτηριστικό κυματοειδές μοτίβο είναι ο θεμελιώδης ρυθμός που βρίσκεται στο φως, τον ήχο και αμέτρητα άλλα φυσικά συστήματα.
+
+<div class="chart-container">
+  <canvas id="sine-wave-chart" data-chart-function="sine" data-amplitude="5" data-frequency="1"></canvas>
+</div>
+
+Η ΑΑΤ είναι ένας ακρογωνιαίος λίθος της φυσικής, παρέχοντας το θεμελιώδες μοντέλο για την κατανόηση των κυμάτων και των ταλαντώσεων.`
           },
         ]
     }
