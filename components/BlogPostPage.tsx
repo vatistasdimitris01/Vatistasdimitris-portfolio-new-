@@ -33,7 +33,6 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, animationsEnabled }) 
   useEffect(() => {
     // Cleanup function to destroy charts when component unmounts or post changes
     return () => {
-      // FIX: The `chart` variable is now correctly typed, resolving the error on `destroy()`.
       Object.values(chartInstances.current).forEach(chart => chart.destroy());
       chartInstances.current = {};
     };
@@ -42,7 +41,6 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, animationsEnabled }) 
   useEffect(() => {
     if (post && contentRef.current && window.marked && window.renderMathInElement) {
       // Destroy previous charts before rendering new ones
-      // FIX: The `chart` variable is now correctly typed, resolving the error on `destroy()`.
       Object.values(chartInstances.current).forEach(chart => chart.destroy());
       chartInstances.current = {};
 
@@ -97,15 +95,13 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, animationsEnabled }) 
       const ctx = canvas.getContext('2d');
       if (!ctx) return;
 
-      let chartData: { labels: any[], datasets: any[] } = { labels: [], datasets: [] };
-
       if (chartFunction === 'parabola') {
         const a = parseFloat(canvas.dataset.a || '1');
         const b = parseFloat(canvas.dataset.b || '0');
         const c = parseFloat(canvas.dataset.c || '0');
         const labels = Array.from({ length: 21 }, (_, i) => i - 10);
         const data = labels.map(x => a * x * x + b * x + c);
-        chartData = {
+        const chartData = {
           labels,
           datasets: [{
             label: `f(x) = ${a}x² + ${b}x + ${c}`,
@@ -115,24 +111,6 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, animationsEnabled }) 
             fill: false,
           }]
         };
-      } else if (chartFunction === 'sine') {
-        const amplitude = parseFloat(canvas.dataset.amplitude || '1');
-        const frequency = parseFloat(canvas.dataset.frequency || '1');
-        const labels = Array.from({ length: 100 }, (_, i) => (i * 4 * Math.PI) / 99);
-        const data = labels.map(x => amplitude * Math.sin(frequency * x));
-         chartData = {
-          labels: labels.map(l => l.toFixed(2)),
-          datasets: [{
-            label: `x(t) = ${amplitude}sin(${frequency}t)`,
-            data,
-            borderColor: '#ff6384',
-            tension: 0.1,
-            fill: false,
-          }]
-        };
-      }
-      
-      if (chartData.labels.length > 0) {
         chartInstances.current[chartId] = new window.Chart(ctx, {
           type: 'line',
           data: chartData,
@@ -154,6 +132,85 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, animationsEnabled }) 
               },
             }
           }
+        });
+      } else if (chartFunction === 'sine') {
+        const amplitude = parseFloat(canvas.dataset.amplitude || '1');
+        const frequency = parseFloat(canvas.dataset.frequency || '1');
+        const labels = Array.from({ length: 100 }, (_, i) => (i * 4 * Math.PI) / 99);
+        const data = labels.map(x => amplitude * Math.sin(frequency * x));
+        const chartData = {
+          labels: labels.map(l => l.toFixed(2)),
+          datasets: [{
+            label: `x(t) = ${amplitude}sin(${frequency}t)`,
+            data,
+            borderColor: '#ff6384',
+            tension: 0.1,
+            fill: false,
+          }]
+        };
+        chartInstances.current[chartId] = new window.Chart(ctx, {
+          type: 'line',
+          data: chartData,
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { labels: { color: textColor, font: { family: "'JetBrains Mono', monospace" } } },
+                tooltip: { bodyFont: { family: "'JetBrains Mono', monospace" }, titleFont: { family: "'JetBrains Mono', monospace" } }
+            },
+            scales: {
+              y: { 
+                  ticks: { color: textColor, font: { family: "'JetBrains Mono', monospace" } },
+                  grid: { color: gridColor }
+              },
+              x: { 
+                  ticks: { color: textColor, font: { family: "'JetBrains Mono', monospace" } },
+                  grid: { color: gridColor }
+              },
+            }
+          }
+        });
+      } else if (chartFunction === 'golden-ratio') {
+        const chartData = {
+          labels: ['Longer Segment (a)', 'Shorter Segment (b)'],
+          datasets: [{
+            data: [1.618, 1],
+            backgroundColor: ['#36a2eb', '#ff6384'],
+            borderColor: ['#36a2eb', '#ff6384'],
+            borderWidth: 1
+          }]
+        };
+        chartInstances.current[chartId] = new window.Chart(ctx, {
+            type: 'bar',
+            data: chartData,
+            options: {
+                indexAxis: 'y', // This makes it a horizontal bar chart
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    title: {
+                        display: true,
+                        text: 'Golden Ratio (a/b ≈ 1.618)',
+                        color: textColor,
+                        font: { family: "'JetBrains Mono', monospace" }
+                    },
+                    tooltip: { 
+                      bodyFont: { family: "'JetBrains Mono', monospace" }, 
+                      titleFont: { family: "'JetBrains Mono', monospace" } 
+                    }
+                },
+                scales: {
+                  y: {
+                      ticks: { color: textColor, font: { family: "'JetBrains Mono', monospace" } },
+                      grid: { color: 'transparent' }
+                  },
+                  x: {
+                      ticks: { color: textColor, font: { family: "'JetBrains Mono', monospace" } },
+                      grid: { color: gridColor }
+                  },
+                }
+            }
         });
       }
     });

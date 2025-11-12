@@ -337,6 +337,47 @@ Below is a graph illustrating the position of an object in Simple Harmonic Motio
 
 SHM is a cornerstone of physics, providing the foundational model for understanding waves and oscillations.`
           },
+          {
+            id: '09',
+            slug: 'golden-ratio-architecture',
+            title: 'The Golden Ratio: Nature\'s Blueprint for Design',
+            date: '2024-08-28',
+            excerpt: 'Explore the Golden Ratio (φ), the mathematical key to beauty found in nature, art, and classical architecture. Learn how this timeless principle creates harmony and proportion.',
+            content: `The **Golden Ratio**, often denoted by the Greek letter phi (φ), is an irrational number approximately equal to 1.618. It's a mathematical principle that appears with surprising frequency in nature, from the spiral of a nautilus shell to the arrangement of seeds in a sunflower. For centuries, artists, designers, and architects have used it as a tool to create aesthetically pleasing and harmonious compositions.
+
+The ratio is derived from a simple geometric relationship. A line segment is divided into two parts of different lengths, such that the ratio of the whole segment to the longer segment is equal to the ratio of the longer segment to the shorter segment.
+\\[
+\\frac{a+b}{a} = \\frac{a}{b} \\equiv \\phi
+\\]
+This proportion is believed to be inherently balanced and pleasing to the human eye.
+
+In **architecture**, the Golden Ratio can be found in the proportions of some of the most iconic structures in history. The Parthenon in Athens is often cited as a prime example, where the dimensions of its facade are said to approximate a golden rectangle. Modern architects like Le Corbusier also incorporated this ratio into their work, using it to define the proportions of building layouts and elevations.
+
+Below is a simple visualization of the Golden Ratio as two line segments.
+
+<div class="chart-container">
+  <canvas id="golden-ratio-chart" data-chart-function="golden-ratio"></canvas>
+</div>
+
+Whether used consciously or intuitively, the Golden Ratio serves as a timeless guide, reminding us that beauty often has a mathematical foundation. It's a bridge between the abstract world of numbers and the tangible world of design.`
+          },
+          {
+            id: '10',
+            slug: 'brutalism-architecture',
+            title: 'Brutalism: The Poetry of Raw Concrete',
+            date: '2024-08-27',
+            excerpt: 'From controversial monuments to celebrated cultural hubs, Brutalism is an architectural style that commands attention. Discover the philosophy behind its raw, honest forms.',
+            content: `Born from the post-war era of the mid-20th century, **Brutalism** is an architectural style characterized by its use of raw, exposed concrete ('béton brut' in French, which gave the movement its name). It is a style that prioritizes honesty of material, form, and function, often resulting in massive, blocky, and visually heavy structures.
+
+Brutalism emerged as a reaction against the perceived frivolity and dishonesty of earlier architectural styles. Architects like Le Corbusier championed a new kind of design that was truthful to its construction. The core tenets include:
+- **Material Honesty**: Exposed concrete, brick, steel, and glass. The texture of the wooden formwork used to cast the concrete is often left visible.
+- **Structural Expression**: The building's structural elements are often visible and form a key part of the aesthetic.
+- **Monumental Forms**: Brutalist buildings are typically large-scale and use bold, geometric shapes.
+
+For decades, Brutalism was heavily criticized as being cold, inhuman, and ugly. Many iconic Brutalist buildings fell into disrepair or were demolished. However, in recent years, there has been a significant resurgence of interest in the style. A new generation of architects and design enthusiasts has come to appreciate its powerful forms, its utopian social ideals, and its uncompromising vision.
+
+From university libraries and government buildings to social housing projects, Brutalist architecture is a testament to an era of ambitious, and often radical, thinking about how we live and build together.`
+          },
         ]
     }
   },
@@ -652,6 +693,47 @@ x(t) = A \\cos(\\omega t + \\phi)
 </div>
 
 Η ΑΑΤ είναι ένας ακρογωνιαίος λίθος της φυσικής, παρέχοντας το θεμελιώδες μοντέλο για την κατανόηση των κυμάτων και των ταλαντώσεων.`
+          },
+          {
+            id: '09',
+            slug: 'golden-ratio-architecture',
+            title: 'Η Χρυσή Τομή: Το Σχέδιο της Φύσης για το Design',
+            date: '2024-08-28',
+            excerpt: 'Εξερευνήστε τη Χρυσή Τομή (φ), το μαθηματικό κλειδί της ομορφιάς που βρίσκεται στη φύση, την τέχνη και την κλασική αρχιτεκτονική. Μάθετε πώς αυτή η διαχρονική αρχή δημιουργεί αρμονία και αναλογία.',
+            content: `Η **Χρυσή Τομή**, που συχνά συμβολίζεται με το ελληνικό γράμμα φι (φ), είναι ένας άρρητος αριθμός περίπου ίσος με 1.618. Είναι μια μαθηματική αρχή που εμφανίζεται με εκπληκτική συχνότητα στη φύση, από τη σπείρα ενός ναυτίλου μέχρι τη διάταξη των σπόρων σε έναν ηλίανθο. Για αιώνες, καλλιτέχνες, σχεδιαστές και αρχιτέκτονες τη χρησιμοποίησαν ως εργαλείο για να δημιουργήσουν αισθητικά ευχάριστες και αρμονικές συνθέσεις.
+
+Η αναλογία προέρχεται από μια απλή γεωμετρική σχέση. Ένα ευθύγραμμο τμήμα χωρίζεται σε δύο μέρη διαφορετικού μήκους, έτσι ώστε ο λόγος ολόκληρου του τμήματος προς το μακρύτερο τμήμα να είναι ίσος με το λόγο του μακρύτερου τμήματος προς το βραχύτερο.
+\\[
+\\frac{a+b}{a} = \\frac{a}{b} \\equiv \\phi
+\\]
+Αυτή η αναλογία πιστεύεται ότι είναι εγγενώς ισορροπημένη και ευχάριστη στο ανθρώπινο μάτι.
+
+Στην **αρχιτεκτονική**, η Χρυσή Τομή μπορεί να βρεθεί στις αναλογίες ορισμένων από τα πιο εμβληματικά κτίρια της ιστορίας. Ο Παρθενώνας στην Αθήνα αναφέρεται συχνά ως χαρακτηριστικό παράδειγμα, όπου οι διαστάσεις της πρόσοψής του λέγεται ότι προσεγγίζουν ένα χρυσό ορθογώνιο. Σύγχρονοι αρχιτέκτονες όπως ο Le Corbusier ενσωμάτωσαν επίσης αυτή την αναλογία στο έργο τους, χρησιμοποιώντας την για να καθορίσουν τις αναλογίες των σχεδιαγραμμάτων και των όψεων των κτιρίων.
+
+Παρακάτω είναι μια απλή οπτικοποίηση της Χρυσής Τομής ως δύο ευθύγραμμα τμήματα.
+
+<div class="chart-container">
+  <canvas id="golden-ratio-chart" data-chart-function="golden-ratio"></canvas>
+</div>
+
+Είτε χρησιμοποιείται συνειδητά είτε διαισθητικά, η Χρυσή Τομή λειτουργεί ως ένας διαχρονικός οδηγός, υπενθυμίζοντάς μας ότι η ομορφιά έχει συχνά μαθηματική βάση. Είναι μια γέφυρα μεταξύ του αφηρημένου κόσμου των αριθμών και του απτού κόσμου του σχεδιασμού.`
+          },
+          {
+            id: '10',
+            slug: 'brutalism-architecture',
+            title: 'Μπρουταλισμός: Η Ποίηση του Γυμνού Σκυροδέματος',
+            date: '2024-08-27',
+            excerpt: 'Από αμφιλεγόμενα μνημεία μέχρι διάσημους πολιτιστικούς κόμβους, ο Μπρουταλισμός είναι ένα αρχιτεκτονικό στυλ που απαιτεί προσοχή. Ανακαλύψτε τη φιλοσοφία πίσω από τις ακατέργαστες, ειλικρινείς μορφές του.',
+            content: `Γεννημένος από τη μεταπολεμική εποχή στα μέσα του 20ού αιώνα, ο **Μπρουταλισμός** είναι ένα αρχιτεκτονικό στυλ που χαρακτηρίζεται από τη χρήση ακατέργαστου, εκτεθειμένου σκυροδέματος ('béton brut' στα γαλλικά, που έδωσε στο κίνημα το όνομά του). Είναι ένα στυλ που δίνει προτεραιότητα στην ειλικρίνεια του υλικού, της μορφής και της λειτουργίας, καταλήγοντας συχνά σε ογκώδεις, κυβικές και οπτικά βαριές κατασκευές.
+
+Ο Μπρουταλισμός εμφανίστηκε ως αντίδραση στην αντιληπτή επιπολαιότητα και ανειλικρίνεια των προηγούμενων αρχιτεκτονικών στυλ. Αρχιτέκτονες όπως ο Le Corbusier προώθησαν ένα νέο είδος σχεδιασμού που ήταν αληθινό στην κατασκευή του. Οι βασικές αρχές περιλαμβάνουν:
+- **Ειλικρίνεια Υλικού**: Εκτεθειμένο σκυρόδεμα, τούβλο, ατσάλι και γυαλί. Η υφή του ξύλινου καλουπιού που χρησιμοποιήθηκε για τη χύτευση του σκυροδέματος συχνά παραμένει ορατή.
+- **Δομική Έκφραση**: Τα δομικά στοιχεία του κτιρίου είναι συχνά ορατά και αποτελούν βασικό μέρος της αισθητικής.
+- **Μνημειακές Μορφές**: Τα μπρουταλιστικά κτίρια είναι συνήθως μεγάλης κλίμακας και χρησιμοποιούν τολμηρά, γεωμετρικά σχήματα.
+
+Για δεκαετίες, ο Μπρουταλισμός επικρίθηκε έντονα ως ψυχρός, απάνθρωπος και άσχημος. Πολλά εμβληματικά μπρουταλιστικά κτίρια περιέπεσαν σε αχρηστία ή κατεδαφίστηκαν. Ωστόσο, τα τελευταία χρόνια, παρατηρείται μια σημαντική αναζωπύρωση του ενδιαφέροντος για το στυλ. Μια νέα γενιά αρχιτεκτόνων και λάτρεις του design έχουν αρχίσει να εκτιμούν τις ισχυρές του μορφές, τα ουτοπικά κοινωνικά του ιδεώδη και το ασυμβίβαστο όραμά του.
+
+Από πανεπιστημιακές βιβλιοθήκες και κυβερνητικά κτίρια μέχρι έργα κοινωνικής κατοικίας, η μπρουταλιστική αρχιτεκτονική αποτελεί μια μαρτυρία μιας εποχής φιλόδοξης, και συχνά ριζοσπαστικής, σκέψης για το πώς ζούμε και χτίζουμε μαζί.`
           },
         ]
     }
