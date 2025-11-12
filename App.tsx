@@ -8,13 +8,14 @@ import { useTheme } from './contexts/ThemeContext';
 import Footer from './components/Footer';
 import BlogPage from './components/BlogPage';
 import BlogPostPage from './components/BlogPostPage';
-import { blogPosts } from './blogPosts';
+import { useLanguage } from './contexts/LanguageContext';
 
 const App: React.FC = () => {
   const [animationsEnabled, setAnimationsEnabled] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme } = useTheme();
   const [route, setRoute] = useState(window.location.hash);
+  const { t } = useLanguage();
 
   // Effect for theme and scroll lock
   useEffect(() => {
@@ -59,7 +60,7 @@ const App: React.FC = () => {
   const renderContent = () => {
     if (route.startsWith('#/blog/')) {
       const slug = route.substring('#/blog/'.length);
-      const post = blogPosts.find(p => p.slug === slug);
+      const post = t.blog.posts.find(p => p.slug === slug);
       // Fallback to blog list if post not found
       return post 
         ? <BlogPostPage post={post} animationsEnabled={animationsEnabled} /> 

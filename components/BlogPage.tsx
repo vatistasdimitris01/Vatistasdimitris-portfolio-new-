@@ -1,6 +1,5 @@
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
-import { blogPosts } from '../blogPosts';
 import HoverText from './HoverText';
 
 interface BlogPageProps {
@@ -22,7 +21,7 @@ const BlogPage: React.FC<BlogPageProps> = ({ animationsEnabled }) => {
           disabled={!animationsEnabled}
         />
 
-      {blogPosts.map(post => (
+      {t.blog.posts.map(post => (
         <div key={post.id} className="w-layout-grid grid_list projects-grid">
           <div className="number-block">{post.id}</div>
           <div className="grid_item">

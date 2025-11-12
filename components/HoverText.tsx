@@ -23,7 +23,8 @@ const HoverText: React.FC<HoverTextProps> = ({ text, as: Component = 'div', clas
 
     const words = text.split(' ');
     element.innerHTML = words.map(word => {
-      const chars = word.split('').map(char => `<span class="char">${char === ' ' ? '&nbsp;' : char}</span>`).join('');
+      // Use Array.from to correctly handle multi-byte characters like emojis
+      const chars = Array.from(word).map(char => `<span class="char">${char === ' ' ? '&nbsp;' : char}</span>`).join('');
       return `<span class="word">${chars}</span>`;
     }).join('');
     
@@ -41,6 +42,14 @@ const HoverText: React.FC<HoverTextProps> = ({ text, as: Component = 'div', clas
       gsap.killTweensOf(chars);
       chars.forEach((char, position) => {
         const initialHTML = originalChars[position];
+        // Regex to detect most emojis and some symbols
+        const isSpecialChar = /(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/.test(initialHTML);
+        
+        // Skip animation for emojis and special characters
+        if (isSpecialChar) {
+          return;
+        }
+
         let repeatCount = 0;
 
         gsap.fromTo(char, 
