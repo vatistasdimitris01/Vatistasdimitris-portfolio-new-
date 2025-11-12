@@ -24,11 +24,33 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ post, animationsEnabled }) 
 
   useEffect(() => {
     if (post && contentRef.current && window.marked && window.renderMathInElement) {
-      // 1. Parse markdown content into HTML. Emojis are text and will render fine.
-      const html = window.marked.parse(post.content);
-      contentRef.current.innerHTML = html;
+      let content = post.content;
+      const mathExpressions: string[] = [];
+      const placeholder = (index: number) => `%%LATEX_PLACEHOLDER_${index}%%`;
 
-      // 2. Find and render any LaTeX math expressions in the generated HTML.
+      // Regex to find content between \(...\) and \[...\], which are used in the blog posts.
+      // This is to protect the LaTeX expressions from being misinterpreted by the Markdown parser.
+      const mathRegex = /(\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\))/g;
+
+      // 1. Replace all math expressions with a unique placeholder.
+      content = content.replace(mathRegex, (match) => {
+        const index = mathExpressions.length;
+        mathExpressions.push(match);
+        return placeholder(index);
+      });
+
+      // 2. Parse the sanitized markdown content into HTML.
+      let html = window.marked.parse(content);
+      
+      // 3. Restore the original math expressions into the generated HTML.
+      html = html.replace(/%%LATEX_PLACEHOLDER_(\d+)%%/g, (_, indexStr) => {
+        const index = parseInt(indexStr, 10);
+        return mathExpressions[index];
+      });
+      
+      contentRef.current.innerHTML = html;
+      
+      // 4. Let KaTeX find and render the math expressions now present in the DOM.
       window.renderMathInElement(contentRef.current, {
         delimiters: [
           { left: '$$', right: '$$', display: true },
