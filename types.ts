@@ -45,3 +45,12 @@ export interface EventData {
   code: string;
   date3: string;
 }
+
+export interface BlogData {
+  id: string;
+  slug: string;
+  title: string;
+  date: string;
+  excerpt: string;
+  content: string;
+}

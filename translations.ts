@@ -15,6 +15,11 @@ interface Translations {
     title: string;
     projects: ProjectData[];
   };
+  blog: {
+    title: string;
+    backToHome: string;
+    backToBlog: string;
+  };
 }
 
 export const translations: { en: Translations; el: Translations } = {
@@ -51,6 +56,11 @@ export const translations: { en: Translations; el: Translations } = {
             { id: '09', title: "MoodMenu", description: "A smart menu generator that creates meal recommendations based on mood and dietary preferences.", url: "https://moodmenu.vercel.app/" },
             { id: '10', title: "GenGlow", description: "An AI-powered platform that generates personalized skincare routines based on user preferences and skin profiles.", url: "https://genglow.vercel.app/" }
         ]
+    },
+    blog: {
+      title: "BLOG",
+      backToHome: "[ Back to Home ]",
+      backToBlog: "[ Back to Blog ]",
     }
   },
   el: {
@@ -86,6 +96,11 @@ export const translations: { en: Translations; el: Translations } = {
             { id: '09', title: "MoodMenu", description: "Μια έξυπνη γεννήτρια μενού που δημιουργεί προτάσεις γευμάτων με βάση τη διάθεση και τις διατροφικές προτιμήσεις.", url: "https://moodmenu.vercel.app/" },
             { id: '10', title: "GenGlow", description: "Μια πλατφόρμα με τεχνητή νοημοσύνη που δημιουργεί εξατομικευμένες ρουτίνες περιποίησης δέρματος με βάση τις προτιμήσεις των χρηστών και τα προφίλ του δέρματος.", url: "https://genglow.vercel.app/" }
         ]
+    },
+    blog: {
+      title: "ΙΣΤΟΛΟΓΙΟ",
+      backToHome: "[ Επιστροφή στην Αρχική ]",
+      backToBlog: "[ Επιστροφή στο Ιστολόγιο ]",
     }
   }
 };

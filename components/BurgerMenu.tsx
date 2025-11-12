@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
-import { useTheme } from '../contexts/ThemeContext'; // Import useTheme
+import { useTheme } from '../contexts/ThemeContext';
 import HoverText from './HoverText';
 
 interface BurgerMenuProps {
@@ -10,12 +10,21 @@ interface BurgerMenuProps {
 
 const BurgerMenu: React.FC<BurgerMenuProps> = ({ isOpen, toggleMenu }) => {
   const { language, toggleLanguage, t } = useLanguage();
-  // Removed `toggleTheme` from useTheme as it's no longer manually toggled
-  const { theme } = useTheme(); 
+  const { theme } = useTheme();
 
-  const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-    toggleMenu(); // Close menu after clicking a link
+  const handleScrollTo = (sectionId: string) => {
+    if (window.location.hash) {
+      // If on a different "page", navigate home first
+      window.location.hash = '';
+      // Wait for re-render then scroll
+      setTimeout(() => {
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      // Already on home page, just scroll
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    }
+    toggleMenu();
   };
 
   return (
@@ -29,10 +38,11 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ isOpen, toggleMenu }) => {
       </div>
       <nav className={`nav-panel ${isOpen ? 'open' : ''}`} aria-hidden={!isOpen}>
         <div className="nav-panel-links">
-            <a onClick={() => scrollToSection('work-experience')}>{t.workExperience.title}</a>
-            <a onClick={() => scrollToSection('projects')}>{t.projects.title}</a>
+            <a onClick={() => handleScrollTo('about')}>{t.hero.title}</a>
+            <a onClick={() => handleScrollTo('work-experience')}>{t.workExperience.title}</a>
+            <a onClick={() => handleScrollTo('projects')}>{t.projects.title}</a>
+            <a href="#/blog" onClick={toggleMenu}>{t.blog.title}</a>
         </div>
-        {/* Removed theme toggle HoverText */}
         <HoverText
           as="div"
           onClick={toggleLanguage}
