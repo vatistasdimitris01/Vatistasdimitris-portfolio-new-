@@ -13,17 +13,7 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ isOpen, toggleMenu }) => {
   const { theme } = useTheme();
 
   const handleScrollTo = (sectionId: string) => {
-    if (window.location.hash) {
-      // If on a different "page", navigate home first
-      window.location.hash = '';
-      // Wait for re-render then scroll
-      setTimeout(() => {
-        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    } else {
-      // Already on home page, just scroll
-      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-    }
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     toggleMenu();
   };
 
@@ -41,7 +31,6 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ isOpen, toggleMenu }) => {
             <a onClick={() => handleScrollTo('about')}>{t.hero.title}</a>
             <a onClick={() => handleScrollTo('work-experience')}>{t.workExperience.title}</a>
             <a onClick={() => handleScrollTo('projects')}>{t.projects.title}</a>
-            <a href="#/blog" onClick={toggleMenu}>{t.blog.title}</a>
         </div>
         <HoverText
           as="div"
