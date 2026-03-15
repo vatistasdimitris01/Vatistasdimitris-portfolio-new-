@@ -54,3 +54,11 @@ export interface BlogData {
   excerpt: string;
   content: string;
 }
+
+export interface CertificateData {
+  id: string;
+  title: string;
+  issuer: string;
+  date: string;
+  url: string;
+}

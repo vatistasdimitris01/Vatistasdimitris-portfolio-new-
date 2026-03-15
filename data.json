@@ -1,0 +1,145 @@
+{
+  "personal": {
+    "name": {
+      "en": "Dimitris Vatistas",
+      "el": "Δημήτρης Βατίστας"
+    },
+    "title": {
+      "en": "Web Developer & Web Designer",
+      "el": "Web Developer & Web Designer"
+    },
+    "bio": {
+      "en": "I'm Dimitris Vatistas, a developer and designer crafting digital products that balance aesthetics with functionality. My work spans the full creative and technical process — from wireframing in Figma and prototyping in Framer, to building production-ready applications in React and Next.js.",
+      "el": "Είμαι ο Δημήτρης Βατίστας, ένας προγραμματιστής και σχεδιαστής που δημιουργεί ψηφιακά προϊόντα που ισορροπούν την αισθητική με τη λειτουργικότητα. Η δουλειά μου καλύπτει ολόκληρη τη δημιουργική και τεχνική διαδικασία — από το wireframing στο Figma και το prototyping στο Framer, μέχρι τη δημιουργία έτοιμων για παραγωγή εφαρμογών σε React και Next.js."
+    },
+    "email": "vatistasdim.ae@icloud.com",
+    "social": [
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/vatistasdimitris/"
+      },
+      {
+        "platform": "X",
+        "url": "https://x.com/vatistasdim"
+      }
+    ]
+  },
+  "workExperience": [
+    {
+      "id": "01",
+      "role": {
+        "en": "Student",
+        "el": "Μαθητής"
+      },
+      "company": {
+        "en": "High School & Further Education",
+        "el": "Λύκειο & Περαιτέρω Εκπαίδευση"
+      },
+      "period": {
+        "en": "2021 - Present",
+        "el": "2021 - Σήμερα"
+      }
+    },
+    {
+      "id": "02",
+      "role": {
+        "en": "Founder & CEO",
+        "el": "Ιδρυτής & CEO"
+      },
+      "company": {
+        "en": "QRoyal",
+        "el": "QRoyal"
+      },
+      "period": {
+        "en": "2023 - 2025",
+        "el": "2023 - 2025"
+      }
+    },
+    {
+      "id": "03",
+      "role": {
+        "en": "Developer",
+        "el": "Προγραμματιστής"
+      },
+      "company": {
+        "en": "AI Beauty",
+        "el": "AI Beauty"
+      },
+      "period": {
+        "en": "2022 - 2023",
+        "el": "2022 - 2023"
+      }
+    },
+    {
+      "id": "04",
+      "role": {
+        "en": "Developer",
+        "el": "Προγραμματιστής"
+      },
+      "company": {
+        "en": "AI Age Verification",
+        "el": "AI Age Verification"
+      },
+      "period": {
+        "en": "2022",
+        "el": "2022"
+      }
+    }
+  ],
+  "projects": [
+    {
+      "id": "01",
+      "title": "AI Age Verification",
+      "description": {
+        "en": "A secure, privacy-first system for frictionless AI-based age verification.",
+        "el": "Ένα ασφαλές, με προτεραιότητα το απόρρητο, σύστημα για απρόσκοπτη επαλήθευση ηλικίας με βάση την τεχνητή νοημοσύνη."
+      },
+      "url": "https://ai-age-verification.vercel.app/"
+    },
+    {
+      "id": "02",
+      "title": "QRoyal",
+      "description": {
+        "en": "A smart digital loyalty program that replaces physical cards with one universal QR-based pass.",
+        "el": "Ένα έξυπνο ψηφιακό πρόγραμμα πιστότητας που αντικαθιστά τις φυσικές κάρτες με ένα καθολικό πάσο βασισμένο σε QR."
+      },
+      "url": "https://qroyal.vercel.app/"
+    },
+    {
+      "id": "03",
+      "title": "Fortnite Vibe Coder",
+      "description": {
+        "en": "A playful project that codes custom Fortnite-inspired 'vibes' into experiences.",
+        "el": "Ένα παιχνιδιάρικο έργο που κωδικοποιεί προσαρμοσμένα «vibes» εμπνευσμένα από το Fortnite σε εμπειρίες."
+      },
+      "url": "https://fortnitevibecoder.vercel.app/"
+    },
+    {
+      "id": "04",
+      "title": "ImageFM",
+      "description": {
+        "en": "A creative AI platform that generates images from user prompts with a music-inspired twist.",
+        "el": "Μια δημιουργική πλατφόρμα τεχνητής νοημοσύνης που δημιουργεί εικόνες από προτροπές χρηστών με μια μουσική έμπνευση."
+      },
+      "url": "https://imagefm.vercel.app/"
+    },
+    {
+      "id": "05",
+      "title": "GenGlow",
+      "description": {
+        "en": "An AI-powered platform that generates personalized skincare routines based on user preferences and skin profiles.",
+        "el": "Μια πλατφόρμα με τεχνητή νοημοσύνη που δημιουργεί εξατομικευμένες ρουτίνες περιποίησης δέρματος με βάση τις προτιμήσεις των χρηστών και τα προφίλ του δέρματος."
+      },
+      "url": "https://genglow.vercel.app/"
+    }
+  ],
+  "certificates": [
+    {
+      "id": "02",
+      "title": "Machine Learning with Python",
+      "issuer": "freeCodeCamp",
+      "date": "2026",
+      "url": "https://www.freecodecamp.org/certification/vatistasdimitris/machine-learning-with-python-v7"
+    }
+  ]
+}
