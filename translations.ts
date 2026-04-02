@@ -39,12 +39,36 @@ export const translations: { en: Translations; el: Translations } = {
       bio: "I'm Dimitris Vatistas, a developer and designer crafting digital products that balance aesthetics with functionality. My work spans the full creative and technical process — from wireframing in Figma and prototyping in Framer, to building production-ready applications in React and Next.js."
     },
     workExperience: {
-      title: "WORK EXPERIENCE",
+      title: "EXPERIENCE",
       experiences: [
-        { id: '01', role: "Student", company: "High School & Further Education", period: "2021 - Present" },
-        { id: '02', role: "Founder & CEO", company: "QRoyal", period: "2023 - 2025" },
-        { id: '03', role: "Developer", company: "AI Beauty", period: "2022 - 2023" },
-        { id: '04', role: "Developer", company: "AI Age Verification", period: "2022" }
+        { 
+          id: '01', 
+          role: "Student", 
+          company: "Stanford CodeInPlace", 
+          period: "2026",
+          description: "Mastered Python fundamentals and software engineering principles through Stanford's intensive online course."
+        },
+        { 
+          id: '02', 
+          role: "Student", 
+          company: "High School & Further Education", 
+          period: "2021 - Present",
+          description: "Focusing on advanced mathematics, with a long-term goal of pursuing studies in Architecture."
+        },
+        { 
+          id: '03', 
+          role: "Founder & CEO", 
+          company: "QRoyal", 
+          period: "2023 - 2025",
+          description: "Founded and led a digital loyalty startup, overseeing product strategy and full-stack development."
+        },
+        { 
+          id: '04', 
+          role: "Developer", 
+          company: "AI Age Verification", 
+          period: "2022",
+          description: "Built secure, privacy-focused age verification systems using machine learning models."
+        }
       ]
     },
     projects: {
@@ -120,12 +144,36 @@ The sine function $f(t) = A\\sin(\\omega t)$.
       bio: "Είμαι ο Δημήτρης Βατίστας, ένας προγραμματιστής και σχεδιαστής που δημιουργεί ψηφιακά προϊόντα που ισορροπούν την αισθητική με τη λειτουργικότητα. Η δουλειά μου καλύπτει ολόκληρη τη δημιουργική και τεχνική διαδικασία — από το wireframing στο Figma και το prototyping στο Framer, μέχρι τη δημιουργία έτοιμων για παραγωγή εφαρμογών σε React και Next.js."
     },
     workExperience: {
-      title: "ΕΠΑΓΓΕΛΜΑΤΙΚΗ ΕΜΠΕΙΡΙΑ",
+      title: "ΕΜΠΕΙΡΙΑ",
       experiences: [
-        { id: '01', role: "Μαθητής", company: "Λύκειο & Περαιτέρω Εκπαίδευση", period: "2021 - Σήμερα" },
-        { id: '02', role: "Ιδρυτής & CEO", company: "QRoyal", period: "2023 - 2025" },
-        { id: '03', role: "Προγραμματιστής", company: "AI Beauty", period: "2022 - 2023" },
-        { id: '04', role: "Προγραμματιστής", company: "AI Age Verification", period: "2022" }
+        { 
+          id: '01', 
+          role: "Μαθητής", 
+          company: "Stanford CodeInPlace", 
+          period: "2026",
+          description: "Εμβάθυνση στις βασικές αρχές της Python και της μηχανικής λογισμικού μέσω του εντατικού διαδικτυακού μαθήματος του Stanford."
+        },
+        { 
+          id: '02', 
+          role: "Μαθητής", 
+          company: "Λύκειο & Περαιτέρω Εκπαίδευση", 
+          period: "2021 - Σήμερα",
+          description: "Εστίαση στα προχωρημένα μαθηματικά, με μακροπρόθεσμο στόχο τις σπουδές στην Αρχιτεκτονική."
+        },
+        { 
+          id: '03', 
+          role: "Ιδρυτής & CEO", 
+          company: "QRoyal", 
+          period: "2023 - 2025",
+          description: "Ίδρυση και καθοδήγηση μιας startup ψηφιακής πιστότητας, επιβλέποντας τη στρατηγική προϊόντος και την ανάπτυξη full-stack."
+        },
+        { 
+          id: '04', 
+          role: "Προγραμματιστής", 
+          company: "AI Age Verification", 
+          period: "2022",
+          description: "Δημιουργία ασφαλών συστημάτων επαλήθευσης ηλικίας με έμφαση στο απόρρητο χρησιμοποιώντας μοντέλα μηχανικής μάθησης."
+        }
       ]
     },
     projects: {

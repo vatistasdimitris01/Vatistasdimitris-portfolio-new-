@@ -9,6 +9,7 @@ export interface WorkExperienceData {
   role: string;
   company: string;
   period: string;
+  description?: string;
 }
 
 export interface ProjectData {

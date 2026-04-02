@@ -32,16 +32,39 @@
         "el": "Μαθητής"
       },
       "company": {
+        "en": "Stanford CodeInPlace",
+        "el": "Stanford CodeInPlace"
+      },
+      "period": {
+        "en": "2026",
+        "el": "2026"
+      },
+      "description": {
+        "en": "Mastered Python fundamentals and software engineering principles through Stanford's intensive online course.",
+        "el": "Εμβάθυνση στις βασικές αρχές της Python και της μηχανικής λογισμικού μέσω του εντατικού διαδικτυακού μαθήματος του Stanford."
+      }
+    },
+    {
+      "id": "02",
+      "role": {
+        "en": "Student",
+        "el": "Μαθητής"
+      },
+      "company": {
         "en": "High School & Further Education",
         "el": "Λύκειο & Περαιτέρω Εκπαίδευση"
       },
       "period": {
         "en": "2021 - Present",
         "el": "2021 - Σήμερα"
+      },
+      "description": {
+        "en": "Focusing on advanced mathematics, with a long-term goal of pursuing studies in Architecture.",
+        "el": "Εστίαση στα προχωρημένα μαθηματικά, με μακροπρόθεσμο στόχο τις σπουδές στην Αρχιτεκτονική."
       }
     },
     {
-      "id": "02",
+      "id": "03",
       "role": {
         "en": "Founder & CEO",
         "el": "Ιδρυτής & CEO"
@@ -53,21 +76,10 @@
       "period": {
         "en": "2023 - 2025",
         "el": "2023 - 2025"
-      }
-    },
-    {
-      "id": "03",
-      "role": {
-        "en": "Developer",
-        "el": "Προγραμματιστής"
       },
-      "company": {
-        "en": "AI Beauty",
-        "el": "AI Beauty"
-      },
-      "period": {
-        "en": "2022 - 2023",
-        "el": "2022 - 2023"
+      "description": {
+        "en": "Founded and led a digital loyalty startup, overseeing product strategy and full-stack development.",
+        "el": "Ίδρυση και καθοδήγηση μιας startup ψηφιακής πιστότητας, επιβλέποντας τη στρατηγική προϊόντος και την ανάπτυξη full-stack."
       }
     },
     {
@@ -83,6 +95,10 @@
       "period": {
         "en": "2022",
         "el": "2022"
+      },
+      "description": {
+        "en": "Built secure, privacy-focused age verification systems using machine learning models.",
+        "el": "Δημιουργία ασφαλών συστημάτων επαλήθευσης ηλικίας με έμφαση στο απόρρητο χρησιμοποιώντας μοντέλα μηχανικής μάθησης."
       }
     }
   ],

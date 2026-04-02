@@ -11,7 +11,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ animationsEnabled }) => {
 
   return (
     <div id="about" className="hero-section">
-      <HoverText text={t.hero.title} className="content-title" disabled={!animationsEnabled} />
+      <HoverText as="h2" text={t.hero.title} className="content-title" disabled={!animationsEnabled} style={{ margin: 0 }} />
       <p className="hero-bio">
         {t.hero.bio}
       </p>

@@ -11,7 +11,7 @@ const CertificatesSection: React.FC<CertificatesSectionProps> = ({ animationsEna
   return (
     <div id="certificates" className="content_section">
       <div className="w-layout-grid grid_list title-grid">
-        <div className="content-title">{t.certificates.title}</div>
+        <h2 className="content-title" style={{ margin: 0 }}>{t.certificates.title}</h2>
       </div>
 
       {t.certificates.certificates.map(data => (

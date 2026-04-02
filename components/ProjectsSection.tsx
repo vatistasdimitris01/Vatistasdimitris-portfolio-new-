@@ -11,7 +11,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ animationsEnabled }) 
   return (
     <div id="projects" className="content_section">
       <div className="w-layout-grid grid_list title-grid">
-        <div className="content-title">{t.projects.title}</div>
+        <h2 className="content-title" style={{ margin: 0 }}>{t.projects.title}</h2>
       </div>
 
       {t.projects.projects.map(data => (

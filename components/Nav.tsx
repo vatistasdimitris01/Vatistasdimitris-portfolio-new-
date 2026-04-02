@@ -16,7 +16,7 @@ const Nav: React.FC<NavProps> = ({ animationsEnabled, toggleAnimations }) => {
   return (
     <div className="nav_component">
       <div className="nav_list">
-        <HoverText as="a" href="#" text={t.nav.name} className="nav-title nav-name" disabled={!animationsEnabled} />
+        <HoverText as="h1" text={t.nav.name} className="nav-title nav-name" disabled={!animationsEnabled} style={{ margin: 0, fontSize: '1.25rem' }} />
         <div className="nav_item">
           {/* Removed theme toggle HoverText */}
           <HoverText

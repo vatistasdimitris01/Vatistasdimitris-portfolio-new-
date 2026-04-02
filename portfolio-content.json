@@ -1,0 +1,94 @@
+{
+  "site_metadata": {
+    "name": "Dimitris Vatistas",
+    "title": "Web Developer & Web Designer",
+    "description": "Dimitris Vatistas is a web developer and designer crafting high-performance digital products. Specializing in React, Next.js, and futuristic UI/UX design.",
+    "url": "https://ais-dev-kxolstadajg3ymhukf7llh-6368239993.europe-west2.run.app",
+    "image": "https://i.postimg.cc/13XPKgNb/Untitled.jpg"
+  },
+  "personal_info": {
+    "bio": "I'm Dimitris Vatistas, a developer and designer crafting digital products that balance aesthetics with functionality. My work spans the full creative and technical process — from wireframing in Figma and prototyping in Framer, to building production-ready applications in React and Next.js.",
+    "email": "vatistasdim.ae@icloud.com",
+    "social": [
+      {
+        "platform": "Instagram",
+        "url": "https://www.instagram.com/vatistasdimitris/"
+      },
+      {
+        "platform": "X",
+        "url": "https://x.com/vatistasdim"
+      }
+    ]
+  },
+  "experience": [
+    {
+      "id": "01",
+      "role": "Student",
+      "company": "Stanford CodeInPlace",
+      "period": "2026",
+      "description": "Mastered Python fundamentals and software engineering principles through Stanford's intensive online course."
+    },
+    {
+      "id": "02",
+      "role": "Student",
+      "company": "High School & Further Education",
+      "period": "2021 - Present",
+      "description": "Focusing on advanced mathematics, with a long-term goal of pursuing studies in Architecture."
+    },
+    {
+      "id": "03",
+      "role": "Founder & CEO",
+      "company": "QRoyal",
+      "period": "2023 - 2025",
+      "description": "Founded and led a digital loyalty startup, overseeing product strategy and full-stack development."
+    },
+    {
+      "id": "04",
+      "role": "Developer",
+      "company": "AI Age Verification",
+      "period": "2022",
+      "description": "Built secure, privacy-focused age verification systems using machine learning models."
+    }
+  ],
+  "projects": [
+    {
+      "id": "01",
+      "title": "AI Age Verification",
+      "description": "A secure, privacy-first system for frictionless AI-based age verification.",
+      "url": "https://ai-age-verification.vercel.app/"
+    },
+    {
+      "id": "02",
+      "title": "QRoyal",
+      "description": "A smart digital loyalty program that replaces physical cards with one universal QR-based pass.",
+      "url": "https://qroyal.vercel.app/"
+    },
+    {
+      "id": "03",
+      "title": "Fortnite Vibe Coder",
+      "description": "A playful project that codes custom Fortnite-inspired 'vibes' into experiences.",
+      "url": "https://fortnitevibecoder.vercel.app/"
+    },
+    {
+      "id": "04",
+      "title": "ImageFM",
+      "description": "A creative AI platform that generates images from user prompts with a music-inspired twist.",
+      "url": "https://imagefm.vercel.app/"
+    },
+    {
+      "id": "05",
+      "title": "GenGlow",
+      "description": "An AI-powered platform that generates personalized skincare routines based on user preferences and skin profiles.",
+      "url": "https://genglow.vercel.app/"
+    }
+  ],
+  "certificates": [
+    {
+      "id": "02",
+      "title": "Machine Learning with Python",
+      "issuer": "freeCodeCamp",
+      "date": "2026",
+      "url": "https://www.freecodecamp.org/certification/vatistasdimitris/machine-learning-with-python-v7"
+    }
+  ]
+}
