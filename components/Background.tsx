@@ -14,8 +14,9 @@ const Background: React.FC = () => {
     let currentScrollY = 0;
 
     const handleMouseMove = (e: MouseEvent) => {
-      mouseX = (e.clientX - window.innerWidth / 2) / 40;
-      mouseY = (e.clientY - window.innerHeight / 2) / 40;
+      const sensitivity = window.innerWidth < 768 ? 20 : 40;
+      mouseX = (e.clientX - window.innerWidth / 2) / sensitivity;
+      mouseY = (e.clientY - window.innerHeight / 2) / sensitivity;
     };
 
     const handleScroll = () => {
@@ -23,31 +24,34 @@ const Background: React.FC = () => {
     };
 
     const animate = () => {
+      const isMobile = window.innerWidth < 768;
+      const lerpFactor = isMobile ? 0.03 : 0.05; // Slightly slower lerp on mobile for stability
+      
       // Lerp mouse movement for smoothness
-      currentX += (mouseX - currentX) * 0.05;
-      currentY += (mouseY - currentY) * 0.05;
+      currentX += (mouseX - currentX) * lerpFactor;
+      currentY += (mouseY - currentY) * lerpFactor;
       
       // Lerp scroll for smoothness
-      currentScrollY += (scrollY - currentScrollY) * 0.05;
+      currentScrollY += (scrollY - currentScrollY) * lerpFactor;
 
       if (containerRef.current) {
         // Rotate and translate based on mouse + scroll
-        const scrollRotation = currentScrollY * 0.005;
+        const scrollRotation = currentScrollY * (isMobile ? 0.003 : 0.005);
         containerRef.current.style.transform = `rotate(${-20 + scrollRotation}deg) translate(${currentX}px, ${currentY}px)`;
       }
 
       if (glowTopRef.current) {
         // Shift glow based on scroll
-        const shiftX = currentScrollY * 0.05;
-        const shiftY = currentScrollY * 0.02;
+        const shiftX = currentScrollY * (isMobile ? 0.03 : 0.05);
+        const shiftY = currentScrollY * (isMobile ? 0.01 : 0.02);
         glowTopRef.current.style.transform = `translate(${shiftX}px, ${shiftY}px)`;
-        glowTopRef.current.style.opacity = `${Math.max(0.2, 1 - currentScrollY / 4000)}`;
+        glowTopRef.current.style.opacity = `${Math.max(0.2, 1 - currentScrollY / (isMobile ? 2000 : 4000))}`;
       }
 
       if (glowBottomRef.current) {
         // Shift glow based on scroll
-        const shiftX = -currentScrollY * 0.02;
-        const shiftY = -currentScrollY * 0.05;
+        const shiftX = -currentScrollY * (isMobile ? 0.01 : 0.02);
+        const shiftY = -currentScrollY * (isMobile ? 0.03 : 0.05);
         glowBottomRef.current.style.transform = `translate(${shiftX}px, ${shiftY}px)`;
       }
 
