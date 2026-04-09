@@ -33,7 +33,7 @@ const Background: React.FC = () => {
       if (containerRef.current) {
         // Rotate and translate based on mouse + scroll
         const scrollRotation = currentScrollY * 0.005;
-        containerRef.current.style.transform = `rotate(${-2 + scrollRotation}deg) translate(${currentX}px, ${currentY}px)`;
+        containerRef.current.style.transform = `rotate(${-20 + scrollRotation}deg) translate(${currentX}px, ${currentY}px)`;
       }
 
       if (glowTopRef.current) {

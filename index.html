@@ -492,7 +492,7 @@
         inset: -50%;
         z-index: 1;
         filter: blur(60px);
-        transform: rotate(-2deg);
+        transform: rotate(-20deg);
         pointer-events: none;
         will-change: transform;
       }
@@ -545,9 +545,9 @@
       }
 
       @keyframes sweep {
-        0%, 10% { transform: translateX(-120%) skewX(-15deg); }
-        50% { transform: translateX(-45%) skewX(0deg); }
-        100% { transform: translateX(40%) skewX(15deg); }
+        0%, 10% { transform: translateX(-120%) skewX(-20deg); }
+        50% { transform: translateX(-45%) skewX(-5deg); }
+        100% { transform: translateX(40%) skewX(10deg); }
       }
 
       .led-mask {
