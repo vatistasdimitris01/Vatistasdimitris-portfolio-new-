@@ -5,6 +5,7 @@ import WorkExperienceSection from './components/WorkExperienceSection';
 import ProjectsSection from './components/ProjectsSection';
 import CertificatesSection from './components/CertificatesSection';
 import BurgerMenu from './components/BurgerMenu';
+import Background from './components/Background';
 import { useTheme } from './contexts/ThemeContext';
 import { useLanguage } from './contexts/LanguageContext';
 
@@ -41,6 +42,7 @@ const App: React.FC = () => {
 
   return (
     <div className="page-wrapper">
+      <Background />
       <BurgerMenu isOpen={isMenuOpen} toggleMenu={toggleMenu} />
       <main className="main-wrapper">
         <div className="section_hero">
