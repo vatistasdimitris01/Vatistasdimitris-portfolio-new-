@@ -15,21 +15,25 @@ const CertificatesSection: React.FC<CertificatesSectionProps> = ({ animationsEna
       </div>
 
       {t.certificates.certificates.map(data => (
-        <div key={data.id} className="w-layout-grid grid_list projects-grid">
+        <a 
+          key={data.id} 
+          href={data.url} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="w-layout-grid grid_list projects-grid"
+          style={{ textDecoration: 'none', color: 'inherit' }}
+        >
           <div className="number-block">{data.id}</div>
           <div className="grid_item">
              <HoverText 
-                as="a" 
-                href={data.url} 
-                target="_blank" 
-                rel="noopener noreferrer" 
+                as="div" 
                 text={data.title} 
                 className="text-block" 
                 disabled={!animationsEnabled}
               />
               <p className="project-description">{data.issuer} - {data.date}</p>
           </div>
-        </div>
+        </a>
       ))}
     </div>
   );
