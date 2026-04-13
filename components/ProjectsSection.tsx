@@ -28,6 +28,27 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ animationsEnabled }) 
                 disabled={!animationsEnabled}
               />
               <p className="project-description">{data.description}</p>
+              
+              {data.caseStudy && (
+                <div className="case-study-container" style={{ marginTop: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                  <div className="case-study-item">
+                    <span className="case-study-label" style={{ fontSize: '0.75rem', color: 'var(--text-muted)', display: 'block', marginBottom: '0.25rem' }}>{t.projects.caseStudyLabels.problem}</span>
+                    <p className="case-study-text" style={{ textTransform: 'none', fontSize: '0.95rem', fontWeight: 300, margin: 0 }}>{data.caseStudy.problem}</p>
+                  </div>
+                  <div className="case-study-item">
+                    <span className="case-study-label" style={{ fontSize: '0.75rem', color: 'var(--text-muted)', display: 'block', marginBottom: '0.25rem' }}>{t.projects.caseStudyLabels.solution}</span>
+                    <p className="case-study-text" style={{ textTransform: 'none', fontSize: '0.95rem', fontWeight: 300, margin: 0 }}>{data.caseStudy.solution}</p>
+                  </div>
+                  <div className="case-study-item">
+                    <span className="case-study-label" style={{ fontSize: '0.75rem', color: 'var(--text-muted)', display: 'block', marginBottom: '0.25rem' }}>{t.projects.caseStudyLabels.tech}</span>
+                    <p className="case-study-text" style={{ textTransform: 'none', fontSize: '0.95rem', fontWeight: 300, margin: 0 }}>{data.caseStudy.techDecisions}</p>
+                  </div>
+                  <div className="case-study-item">
+                    <span className="case-study-label" style={{ fontSize: '0.75rem', color: 'var(--text-muted)', display: 'block', marginBottom: '0.25rem' }}>{t.projects.caseStudyLabels.results}</span>
+                    <p className="case-study-text" style={{ textTransform: 'none', fontSize: '0.95rem', fontWeight: 400, margin: 0, color: 'var(--text-color)' }}>{data.caseStudy.results}</p>
+                  </div>
+                </div>
+              )}
           </div>
         </div>
       ))}

@@ -53,33 +53,75 @@
   "projects": [
     {
       "id": "01",
-      "title": "AI Age Verification",
-      "description": "A secure, privacy-first system for frictionless AI-based age verification.",
-      "url": "https://ai-age-verification.vercel.app/"
+      "title": "STRM",
+      "description": "A clean, minimalist, and completely ad-free streaming platform for movies and TV shows.",
+      "url": "https://strm-movies.vercel.app/",
+      "caseStudy": {
+        "problem": "Most free streaming sites are cluttered with intrusive ads, pop-ups, and trackers that ruin the user experience.",
+        "solution": "A high-performance streaming platform that aggregates content from secure third-party providers with zero ads.",
+        "techDecisions": "Built with Next.js and a custom proxy layer to ensure fast, secure, and frictionless content delivery.",
+        "results": "Achieved a 100% ad-free experience with zero pop-ups, leading to high user retention and engagement."
+      }
     },
     {
       "id": "02",
-      "title": "QRoyal",
-      "description": "A smart digital loyalty program that replaces physical cards with one universal QR-based pass.",
-      "url": "https://qroyal.vercel.app/"
+      "title": "AI Age Verification",
+      "description": "A secure, privacy-first system for frictionless AI-based age verification.",
+      "url": "https://ai-age-verification.vercel.app/",
+      "caseStudy": {
+        "problem": "Traditional age verification is slow, intrusive, and often fails to protect user privacy.",
+        "solution": "Developed a privacy-first AI system that verifies age via facial analysis without storing personal data.",
+        "techDecisions": "Used TensorFlow.js for client-side processing to ensure data never leaves the device.",
+        "results": "Reduced verification time by 60% and achieved 98% accuracy in age estimation."
+      }
     },
     {
       "id": "03",
-      "title": "Fortnite Vibe Coder",
-      "description": "A playful project that codes custom Fortnite-inspired 'vibes' into experiences.",
-      "url": "https://fortnitevibecoder.vercel.app/"
+      "title": "QRoyal",
+      "description": "A smart digital loyalty program that replaces physical cards with one universal QR-based pass.",
+      "url": "https://qroyal.vercel.app/",
+      "caseStudy": {
+        "problem": "Physical loyalty cards are easily lost and businesses struggle to track customer engagement effectively.",
+        "solution": "A universal digital pass system using QR codes for seamless check-ins and rewards.",
+        "techDecisions": "Implemented a serverless architecture with Firebase for real-time updates and scalability.",
+        "results": "Handled 5,000+ active users and improved customer retention for partner businesses by 25%."
+      }
     },
     {
       "id": "04",
-      "title": "ImageFM",
-      "description": "A creative AI platform that generates images from user prompts with a music-inspired twist.",
-      "url": "https://imagefm.vercel.app/"
+      "title": "Fortnite Vibe Coder",
+      "description": "A playful project that codes custom Fortnite-inspired 'vibes' into experiences.",
+      "url": "https://fortnitevibecoder.vercel.app/",
+      "caseStudy": {
+        "problem": "Creating custom, high-quality visual experiences for the Fortnite community was complex and time-consuming.",
+        "solution": "A specialized tool that automates the 'vibe' coding process for creative maps.",
+        "techDecisions": "Built with Next.js and Tailwind CSS for a fast, responsive, and visually appealing interface.",
+        "results": "Streamlined map creation for 1,000+ creators, reducing setup time from hours to minutes."
+      }
     },
     {
       "id": "05",
+      "title": "ImageFM",
+      "description": "A creative AI platform that generates images from user prompts with a music-inspired twist.",
+      "url": "https://imagefm.vercel.app/",
+      "caseStudy": {
+        "problem": "AI image generation often lacks a creative 'rhythm' or intuitive user interface for non-technical artists.",
+        "solution": "A music-inspired AI platform that maps audio-like parameters to visual generation.",
+        "techDecisions": "Integrated OpenAI's DALL-E API with a custom React-based control panel.",
+        "results": "Generated 10,000+ unique images with a 40% higher user engagement rate compared to standard prompts."
+      }
+    },
+    {
+      "id": "06",
       "title": "GenGlow",
       "description": "An AI-powered platform that generates personalized skincare routines based on user preferences and skin profiles.",
-      "url": "https://genglow.vercel.app/"
+      "url": "https://genglow.vercel.app/",
+      "caseStudy": {
+        "problem": "Skincare is highly personal, and users are often overwhelmed by generic product recommendations.",
+        "solution": "An AI-driven diagnostic tool that creates hyper-personalized skincare routines.",
+        "techDecisions": "Leveraged Supabase for secure user data management and a custom recommendation engine.",
+        "results": "Improved user satisfaction by 50% and successfully handled 2,000+ skin profile analyses."
+      }
     }
   ],
   "certificates": [

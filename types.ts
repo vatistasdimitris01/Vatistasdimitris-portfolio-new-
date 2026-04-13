@@ -17,6 +17,12 @@ export interface ProjectData {
   title: string;
   description: string;
   url: string;
+  caseStudy?: {
+    problem: string;
+    solution: string;
+    techDecisions: string;
+    results: string;
+  };
 }
 
 export interface SocialLink {
