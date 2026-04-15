@@ -2,11 +2,9 @@ import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import HoverText from './HoverText';
 
-interface ProjectsSectionProps {
-  animationsEnabled: boolean;
-}
+interface ProjectsSectionProps {}
 
-const ProjectsSection: React.FC<ProjectsSectionProps> = ({ animationsEnabled }) => {
+const ProjectsSection: React.FC<ProjectsSectionProps> = () => {
   const { t } = useLanguage();
   return (
     <div id="projects" className="content_section">
@@ -29,7 +27,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ animationsEnabled }) 
                 as="div" 
                 text={data.title} 
                 className="text-block" 
-                disabled={!animationsEnabled}
+                disabled={false}
               />
               <p className="project-description">{data.description}</p>
               

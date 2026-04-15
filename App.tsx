@@ -10,7 +10,6 @@ import { useTheme } from './contexts/ThemeContext';
 import { useLanguage } from './contexts/LanguageContext';
 
 const App: React.FC = () => {
-  const [animationsEnabled, setAnimationsEnabled] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme } = useTheme();
   const { t } = useLanguage();
@@ -32,10 +31,6 @@ const App: React.FC = () => {
     };
   }, [isMenuOpen, theme]);
 
-  const toggleAnimations = () => {
-    setAnimationsEnabled(prev => !prev);
-  };
-
   const toggleMenu = () => {
     setIsMenuOpen(prev => !prev);
   };
@@ -48,11 +43,11 @@ const App: React.FC = () => {
         <div className="section_hero">
           <div className="padding-global">
             <div className="hero_wrapper">
-              <Nav animationsEnabled={animationsEnabled} toggleAnimations={toggleAnimations} />
-              <HeroSection animationsEnabled={animationsEnabled} />
-              <WorkExperienceSection animationsEnabled={animationsEnabled} />
-              <ProjectsSection animationsEnabled={animationsEnabled} />
-              <CertificatesSection animationsEnabled={animationsEnabled} />
+              <Nav />
+              <HeroSection animationsEnabled={true} />
+              <WorkExperienceSection animationsEnabled={true} />
+              <ProjectsSection animationsEnabled={true} />
+              <CertificatesSection animationsEnabled={true} />
             </div>
           </div>
         </div>
