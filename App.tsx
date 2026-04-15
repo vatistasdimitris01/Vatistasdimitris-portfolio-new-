@@ -37,7 +37,6 @@ const App: React.FC = () => {
 
   return (
     <div className="page-wrapper">
-      <Background />
       <BurgerMenu isOpen={isMenuOpen} toggleMenu={toggleMenu} />
       <main className="main-wrapper">
         <div className="section_hero">
