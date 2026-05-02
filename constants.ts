@@ -3,30 +3,29 @@ import type { PersonalInfo, WorkExperienceData, ProjectData, ConnectInfo, Erupti
 export const personalInfo: PersonalInfo = {
   name: "Dimitris Vatistas",
   title: "Web Developer & Web Designer",
-  bio: "I'm Dimitris Vatistas, a developer and designer passionate about crafting digital products that balance aesthetics with functionality. My work spans the full creative and technical process — from wireframing in Figma and prototyping in Framer, to building production-ready applications in React and Next.js."
+  bio: "I'm Dimitris Vatistas, a developer and designer building high-performance digital products that balance aesthetics and function. I specialize in bridging the gap between design and engineering, moving from Figma prototypes to production-ready applications in React and Next.js."
 };
 
 export const workExperience: WorkExperienceData[] = [
-  { id: '01', role: "Founder & CEO", company: "QRoyal", period: "2023 - Present" },
+  { id: '01', role: "Founder & CEO", company: "QRoyal", period: "2023 - 2025" },
   { id: '02', role: "Developer", company: "AI Beauty", period: "2022 - 2023" },
-  { id: '03', role: "Developer", company: "AI Age Verification", period: "2022" },
-  { id: '04', role: "Student", company: "High School & Further Education", period: "2021 - Present" }
+  { id: '03', role: "Developer", company: "AI Age Verification", period: "2022" }
 ];
 
 export const connect: ConnectInfo = {
   email: "vatistasdim.ae@icloud.com",
   socialLinks: [
     { platform: "X", url: "https://x.com/vatistasdim" },
-    { platform: "Instagram", url: "https://www.instagram.com/vatistasdimitris/" }
+    { platform: "Instagram", url: "https://www.instagram.com/vatistasdimitris/" },
+    { platform: "GitHub", url: "https://github.com/vatistasdimitris01" }
   ]
 };
 
 export const projects: ProjectData[] = [
-  { id: '01', title: "AI Age Verification", description: "A secure, privacy-first system for frictionless AI-based age verification.", url: "https://ai-age-verification.vercel.app/" },
+  { id: '01', title: "CIPHER", description: "An AI coding assistant that writes, edits, and runs code in real-time with live preview.", url: "https://cipherend.vercel.app/" },
   { id: '02', title: "QRoyal", description: "A smart digital loyalty program that replaces physical cards with one universal QR-based pass.", url: "https://qroyal.vercel.app/" },
-  { id: '03', title: "Fortnite Vibe Coder", description: "A playful project that codes custom Fortnite-inspired 'vibes' into experiences.", url: "https://fortnitevibecoder.vercel.app/" },
-  { id: '04', title: "ImageFM", description: "A creative AI platform that generates images from user prompts with a music-inspired twist.", url: "https://imagefm.vercel.app/" },
-  { id: '05', title: "GenGlow", description: "An AI-powered platform that generates personalized skincare routines based on user preferences and skin profiles.", url: "https://genglow.vercel.app/" }
+  { id: '04', title: "STRM", description: "A clean, minimalist, and completely ad-free streaming platform for movies and TV shows.", url: "https://strm-movies.vercel.app/" },
+  { id: '05', title: "MY SEARCH", description: "A fast, free REST API for web search and content scraping with clean JSON output.", url: "https://mysearchengine.vercel.app/" }
 ];
 
 // FIX: Add eruptions data to resolve import error in EruptionsSection.

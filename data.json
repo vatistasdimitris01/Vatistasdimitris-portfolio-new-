@@ -9,8 +9,8 @@
       "el": "Web Developer & Web Designer"
     },
     "bio": {
-      "en": "I'm Dimitris Vatistas, a developer and designer crafting digital products that balance aesthetics with functionality. My work spans the full creative and technical process — from wireframing in Figma and prototyping in Framer, to building production-ready applications in React and Next.js.",
-      "el": "Είμαι ο Δημήτρης Βατίστας, ένας προγραμματιστής και σχεδιαστής που δημιουργεί ψηφιακά προϊόντα που ισορροπούν την αισθητική με τη λειτουργικότητα. Η δουλειά μου καλύπτει ολόκληρη τη δημιουργική και τεχνική διαδικασία — από το wireframing στο Figma και το prototyping στο Framer, μέχρι τη δημιουργία έτοιμων για παραγωγή εφαρμογών σε React και Next.js."
+      "en": "I'm Dimitris Vatistas, a developer and designer building high-performance digital products that balance aesthetics and function. I specialize in bridging the gap between design and engineering, moving from Figma prototypes to production-ready applications in React and Next.js.",
+      "el": "Είμαι ο Δημήτρης Βατίστας, ένας προγραμματιστής και σχεδιαστής που δημιουργεί ψηφιακά προϊόντα υψηλής απόδοσης που ισορροπούν την αισθητική με τη λειτουργικότητα. Εξειδικεύομαι στη γεφύρωση του χάσματος μεταξύ σχεδιασμού και μηχανικής, μεταβαίνοντας από πρωτότυπα Figma σε εφαρμογές έτοιμες για παραγωγή σε React και Next.js."
     },
     "email": "vatistasdim.ae@icloud.com",
     "social": [
@@ -21,6 +21,10 @@
       {
         "platform": "X",
         "url": "https://x.com/vatistasdim"
+      },
+      {
+        "platform": "GitHub",
+        "url": "https://github.com/vatistasdimitris01"
       }
     ]
   },
@@ -42,25 +46,6 @@
       "description": {
         "en": "Mastered Python fundamentals and software engineering principles through Stanford's intensive online course.",
         "el": "Εμβάθυνση στις βασικές αρχές της Python και της μηχανικής λογισμικού μέσω του εντατικού διαδικτυακού μαθήματος του Stanford."
-      }
-    },
-    {
-      "id": "02",
-      "role": {
-        "en": "Student",
-        "el": "Μαθητής"
-      },
-      "company": {
-        "en": "High School & Further Education",
-        "el": "Λύκειο & Περαιτέρω Εκπαίδευση"
-      },
-      "period": {
-        "en": "2021 - Present",
-        "el": "2021 - Σήμερα"
-      },
-      "description": {
-        "en": "Focusing on advanced mathematics, with a long-term goal of pursuing studies in Architecture.",
-        "el": "Εστίαση στα προχωρημένα μαθηματικά, με μακροπρόθεσμο στόχο τις σπουδές στην Αρχιτεκτονική."
       }
     },
     {
@@ -105,12 +90,12 @@
   "projects": [
     {
       "id": "01",
-      "title": "AI Age Verification",
+      "title": "CIPHER",
       "description": {
-        "en": "A secure, privacy-first system for frictionless AI-based age verification.",
-        "el": "Ένα ασφαλές, με προτεραιότητα το απόρρητο, σύστημα για απρόσκοπτη επαλήθευση ηλικίας με βάση την τεχνητή νοημοσύνη."
+        "en": "An AI coding assistant that writes, edits, and runs code in real-time with live preview.",
+        "el": "Ένας βοηθός κωδικοποίησης AI που γράφει, επεξεργάζεται και εκτελεί κώδικα σε πραγματικό χρόνο με ζωντανή προεπισκόπηση."
       },
-      "url": "https://ai-age-verification.vercel.app/"
+      "url": "https://cipherend.vercel.app/"
     },
     {
       "id": "02",
@@ -122,40 +107,23 @@
       "url": "https://qroyal.vercel.app/"
     },
     {
-      "id": "03",
-      "title": "Fortnite Vibe Coder",
-      "description": {
-        "en": "A playful project that codes custom Fortnite-inspired 'vibes' into experiences.",
-        "el": "Ένα παιχνιδιάρικο έργο που κωδικοποιεί προσαρμοσμένα «vibes» εμπνευσμένα από το Fortnite σε εμπειρίες."
-      },
-      "url": "https://fortnitevibecoder.vercel.app/"
-    },
-    {
       "id": "04",
-      "title": "ImageFM",
+      "title": "STRM",
       "description": {
-        "en": "A creative AI platform that generates images from user prompts with a music-inspired twist.",
-        "el": "Μια δημιουργική πλατφόρμα τεχνητής νοημοσύνης που δημιουργεί εικόνες από προτροπές χρηστών με μια μουσική έμπνευση."
+        "en": "A clean, minimalist, and completely ad-free streaming platform for movies and TV shows.",
+        "el": "Μια καθαρή, μινιμαλιστική και εντελώς χωρίς διαφημίσεις πλατφόρμα streaming για ταινίες και τηλεοπτικές εκπομπές."
       },
-      "url": "https://imagefm.vercel.app/"
+      "url": "https://strm-movies.vercel.app/"
     },
     {
       "id": "05",
-      "title": "GenGlow",
+      "title": "MY SEARCH",
       "description": {
-        "en": "An AI-powered platform that generates personalized skincare routines based on user preferences and skin profiles.",
-        "el": "Μια πλατφόρμα με τεχνητή νοημοσύνη που δημιουργεί εξατομικευμένες ρουτίνες περιποίησης δέρματος με βάση τις προτιμήσεις των χρηστών και τα προφίλ του δέρματος."
+        "en": "A fast, free REST API for web search and content scraping with clean JSON output.",
+        "el": "Ένα γρήγορο, δωρεάν REST API για αναζήτηση στον ιστό και απόσπαση περιεχομένου με καθαρή έξοδο JSON."
       },
-      "url": "https://genglow.vercel.app/"
+      "url": "https://mysearchengine.vercel.app/"
     }
   ],
-  "certificates": [
-    {
-      "id": "02",
-      "title": "Machine Learning with Python",
-      "issuer": "freeCodeCamp",
-      "date": "2026",
-      "url": "https://www.freecodecamp.org/certification/vatistasdimitris/machine-learning-with-python-v7"
-    }
-  ]
+  "certificates": []
 }

@@ -3,7 +3,7 @@ import Nav from './components/Nav';
 import HeroSection from './components/HeroSection';
 import WorkExperienceSection from './components/WorkExperienceSection';
 import ProjectsSection from './components/ProjectsSection';
-import CertificatesSection from './components/CertificatesSection';
+import Footer from './components/Footer';
 import BurgerMenu from './components/BurgerMenu';
 import Background from './components/Background';
 import { useTheme } from './contexts/ThemeContext';
@@ -46,8 +46,8 @@ const App: React.FC = () => {
               <HeroSection animationsEnabled={true} />
               <WorkExperienceSection animationsEnabled={true} />
               <ProjectsSection animationsEnabled={true} />
-              <CertificatesSection animationsEnabled={true} />
             </div>
+            <Footer animationsEnabled={true} />
           </div>
         </div>
       </main>
